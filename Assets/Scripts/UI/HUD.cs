@@ -32,7 +32,7 @@ public class HUD : MonoBehaviour
                 
                 // Guardamos una referencia del objeto
                 itemDragHandler.Item = e.Item;
-                
+
                 break;
             }
         }
@@ -47,24 +47,19 @@ public class HUD : MonoBehaviour
             Transform imageTransform = slot.GetChild(0).GetChild(0);
             Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
             ItemDragHandler itemDragHandler = imageTransform.GetComponent<ItemDragHandler>();
-            
-            // Encontramos un slot vacio
-            if (itemDragHandler.Item.Equals(e.Item))
+
+            if (itemDragHandler.Item != null)
             {
-                image.enabled = false;
-                image.sprite = null;
-                itemDragHandler.Item = null;
-                break;
+                // Encontramos el ITEM en la UI
+                if (itemDragHandler.Item.Equals(e.Item))
+                {
+                    image.enabled = false;
+                    image.sprite = null;
+                    itemDragHandler.Item = null;
+                    break;
+                }
             }
             
-            if (itemDragHandler.Item.Equals(e.Item))
-            {
-                image.enabled = false;
-                image.sprite = null;
-
-
-                break;
-            }
         }
     }
 }

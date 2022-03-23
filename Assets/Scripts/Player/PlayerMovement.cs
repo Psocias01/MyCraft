@@ -22,13 +22,29 @@ public class PlayerMovement : MonoBehaviour
     
     private Vector3 velocity;
     private bool isGrounded;
+
+    public GameObject Hand;
     
     // Start is called before the first frame update
     void Start()
     {
         Controller = GetComponent<CharacterController>();
+        Inventory.ItemUsed += Inventory_ItemUsed;
     }
 
+    private void Inventory_ItemUsed(object sender, InventoryEventArgs e)
+    {
+        IInventoryItem item = e.Item;
+        
+        // Hacer algo con el Objeto.
+        GameObject goItem = (item as MonoBehaviour).gameObject;
+        goItem.SetActive(true);
+
+        goItem.transform.parent = Hand.transform;
+        goItem.transform.position = Hand.transform.position;
+
+
+    }
     // Update is called once per frame
     void Update()
     {

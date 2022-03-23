@@ -10,8 +10,9 @@ public class Inventory : MonoBehaviour
    private List<IInventoryItem> mItems = new List<IInventoryItem>();
 
    public event EventHandler<InventoryEventArgs> ItemAdded;
-   
    public event EventHandler<InventoryEventArgs> ItemRemoved;
+   public event EventHandler<InventoryEventArgs> ItemUsed;
+
 
    // Logica aplicada al quitar un objeto del inventario(de momento colisionanado).
    public void AddItem(IInventoryItem item)
@@ -32,6 +33,14 @@ public class Inventory : MonoBehaviour
                ItemAdded(this, new InventoryEventArgs(item));
             }
          }
+      }
+   }
+   
+   public void UseItem(IInventoryItem item)
+   {
+      if (ItemUsed != null)
+      {
+         ItemUsed(this, new InventoryEventArgs(item));
       }
    }
    
@@ -56,4 +65,6 @@ public class Inventory : MonoBehaviour
          }
       }
    }
+
+   
 }
