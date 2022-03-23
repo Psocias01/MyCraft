@@ -1,0 +1,59 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+
+public class Inventory : MonoBehaviour
+{
+   private const int SLOTS = 9;
+
+   private List<IInventoryItem> mItems = new List<IInventoryItem>();
+
+   public event EventHandler<InventoryEventArgs> ItemAdded;
+   
+   public event EventHandler<InventoryEventArgs> ItemRemoved;
+
+   // Logica aplicada al quitar un objeto del inventario(de momento colisionanado).
+   public void AddItem(IInventoryItem item)
+   {
+      if (mItems.Count < SLOTS)
+      {
+         Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
+         if (collider.enabled)
+         {
+            collider.enabled = false;
+            
+            mItems.Add(item);
+            
+            item.OnPickup();
+            
+            if (ItemAdded != null)
+            {
+               ItemAdded(this, new InventoryEventArgs(item));
+            }
+         }
+      }
+   }
+   
+   // Logica aplicada al quitar un objeto del inventario(de momento arrastrando).
+   public void RemoveItem(IInventoryItem item)
+   {
+      if (mItems.Contains(item))
+      {
+         mItems.Remove(item);
+         
+         item.OnDrop();
+         
+         Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
+         if (collider != null)
+         {
+            collider.enabled = true;
+         }
+
+         if (ItemRemoved != null)
+         {
+            ItemRemoved(this, new InventoryEventArgs(item));
+         }
+      }
+   }
+}
