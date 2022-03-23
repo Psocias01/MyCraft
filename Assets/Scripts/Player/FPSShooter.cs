@@ -11,6 +11,9 @@ public class FPSShooter : MonoBehaviour
     
     private Vector3 destination;
     private bool leftHand;
+    public float projectileSpeed = 30;
+
+    public bool canFire;
     
     // Start is called before the first frame update
     void Start()
@@ -21,9 +24,12 @@ public class FPSShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (canFire)
         {
-            ShootProjectile();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                ShootProjectile();
+            }
         }
     }
 
@@ -57,6 +63,8 @@ public class FPSShooter : MonoBehaviour
     void InstantiateProjectile(Transform firePoint)
     {
         var projectileObj = Instantiate(projectile, firePoint.position, Quaternion.identity) as GameObject;
+        
+        projectileObj.GetComponent<Rigidbody>().velocity = (destination - firePoint.position).normalized * projectileSpeed;
     }
 
 }
