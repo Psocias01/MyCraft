@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     
     public Inventory Inventory;
 
+    public HUD HUD;
+
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
@@ -57,6 +59,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Metodo para recoger objetos si estamos en su radio de recogida.
+        if (mItemToPickup != null && Input.GetKeyDown(KeyCode.F))
+        {
+            Inventory.AddItem(mItemToPickup);
+            mItemToPickup.OnPickup();
+            HUD.CloseMessagePanel();
+        }
+        
+        
         // Regulamos con uns CheckSphere cuando el player está Grounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -85,12 +96,24 @@ public class PlayerMovement : MonoBehaviour
         Controller.Move(velocity * Time.deltaTime);
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private IInventoryItem mItemToPickup = null;
+    private void OnTriggerEnter(Collider other)
     {
-        IInventoryItem item = hit.collider.GetComponent<IInventoryItem>();
+        IInventoryItem item = other.GetComponent<IInventoryItem>();
         if (item != null)
         {
-            Inventory.AddItem(item);
+            mItemToPickup = item;
+            HUD.OpenMessagePanel("");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        IInventoryItem item = other.GetComponent<IInventoryItem>();
+        if (item != null)
+        {
+            HUD.CloseMessagePanel();
+            mItemToPickup = null;
         }
     }
 }
