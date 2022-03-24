@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     
     public Inventory Inventory;
 
+    public HUD HUD;
+
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
@@ -30,6 +32,18 @@ public class PlayerMovement : MonoBehaviour
     {
         Controller = GetComponent<CharacterController>();
         Inventory.ItemUsed += Inventory_ItemUsed;
+        Inventory.ItemRemoved += Inventory_ItemRemoved;
+    }
+
+    private void Inventory_ItemRemoved(object sender, InventoryEventArgs e)
+    {
+        IInventoryItem item = e.Item;
+        
+        GameObject goItem = (item as MonoBehaviour).gameObject;
+        goItem.SetActive(true);
+
+        // Desparentamos el objeto del player al quitarlo del inventario.
+        goItem.transform.parent = null;
     }
 
     private void Inventory_ItemUsed(object sender, InventoryEventArgs e)
@@ -41,13 +55,19 @@ public class PlayerMovement : MonoBehaviour
         goItem.SetActive(true);
 
         goItem.transform.parent = Hand.transform;
-        goItem.transform.position = Hand.transform.position;
-
-
     }
     // Update is called once per frame
     void Update()
     {
+        // Metodo para recoger objetos si estamos en su radio de recogida.
+        if (mItemToPickup != null && Input.GetKeyDown(KeyCode.F))
+        {
+            Inventory.AddItem(mItemToPickup);
+            mItemToPickup.OnPickup();
+            HUD.CloseMessagePanel();
+        }
+        
+        
         // Regulamos con uns CheckSphere cuando el player está Grounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -76,12 +96,24 @@ public class PlayerMovement : MonoBehaviour
         Controller.Move(velocity * Time.deltaTime);
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private IInventoryItem mItemToPickup = null;
+    private void OnTriggerEnter(Collider other)
     {
-        IInventoryItem item = hit.collider.GetComponent<IInventoryItem>();
+        IInventoryItem item = other.GetComponent<IInventoryItem>();
         if (item != null)
         {
-            Inventory.AddItem(item);
+            mItemToPickup = item;
+            HUD.OpenMessagePanel("");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        IInventoryItem item = other.GetComponent<IInventoryItem>();
+        if (item != null)
+        {
+            HUD.CloseMessagePanel();
+            mItemToPickup = null;
         }
     }
 }
