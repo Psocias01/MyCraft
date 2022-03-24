@@ -8,11 +8,15 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
+    #region Public Members
+
     public CharacterController Controller;
     
     public Inventory Inventory;
 
     public HUD HUD;
+    
+    public GameObject Hand;
 
     public float speed = 12f;
     public float gravity = -9.81f;
@@ -21,11 +25,21 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+
+    #endregion
+   
+
+    #region Private Members
+    
+    private IInventoryItem mCurrentItem = null;
     
     private Vector3 velocity;
     private bool isGrounded;
+    
+    #endregion
+    
 
-    public GameObject Hand;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -46,15 +60,25 @@ public class PlayerMovement : MonoBehaviour
         goItem.transform.parent = null;
     }
 
+    private void SetItemActive(IInventoryItem item, bool active)
+    {
+        GameObject currentItem = (item as MonoBehaviour).gameObject;
+        currentItem.SetActive(active);
+        currentItem.transform.parent = active ? Hand.transform : null;
+    }
+    
     private void Inventory_ItemUsed(object sender, InventoryEventArgs e)
     {
+        if (mCurrentItem != null)
+        {
+            SetItemActive(mCurrentItem, false);
+        }
         IInventoryItem item = e.Item;
         
-        // Hacer algo con el Objeto.
-        GameObject goItem = (item as MonoBehaviour).gameObject;
-        goItem.SetActive(true);
+        // Hacer algo con el Objeto(ponerlo en la mano).
+        SetItemActive(item, true);
 
-        goItem.transform.parent = Hand.transform;
+        mCurrentItem = e.Item;
     }
     // Update is called once per frame
     void Update()
@@ -65,6 +89,13 @@ public class PlayerMovement : MonoBehaviour
             Inventory.AddItem(mItemToPickup);
             mItemToPickup.OnPickup();
             HUD.CloseMessagePanel();
+        }
+        
+        // Ejecutar la accion deseada cuando el item deseado está activo.
+        if (mCurrentItem != null && Input.GetMouseButtonDown(0))
+        {
+            // TO DO: Definir que acción invidual hará cada item.
+            //_animator.SetTrigger("Attack_1");
         }
         
         
