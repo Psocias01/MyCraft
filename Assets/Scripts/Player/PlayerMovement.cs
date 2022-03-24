@@ -30,6 +30,18 @@ public class PlayerMovement : MonoBehaviour
     {
         Controller = GetComponent<CharacterController>();
         Inventory.ItemUsed += Inventory_ItemUsed;
+        Inventory.ItemRemoved += Inventory_ItemRemoved;
+    }
+
+    private void Inventory_ItemRemoved(object sender, InventoryEventArgs e)
+    {
+        IInventoryItem item = e.Item;
+        
+        GameObject goItem = (item as MonoBehaviour).gameObject;
+        goItem.SetActive(true);
+
+        // Desparentamos el objeto del player al quitarlo del inventario.
+        goItem.transform.parent = null;
     }
 
     private void Inventory_ItemUsed(object sender, InventoryEventArgs e)
@@ -41,9 +53,6 @@ public class PlayerMovement : MonoBehaviour
         goItem.SetActive(true);
 
         goItem.transform.parent = Hand.transform;
-        goItem.transform.position = Hand.transform.position;
-
-
     }
     // Update is called once per frame
     void Update()
