@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8058752580034432200}
   - component: {fileID: 6375315120619783021}
   - component: {fileID: 9195607284886599591}
+  - component: {fileID: 4670361562567977746}
   m_Layer: 0
   m_Name: vallas_indios
   m_TagString: Untagged
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4670361562567977746
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7250127355938035314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 88734be1fa4027341a1b81cf2be6dacd, type: 3}
