@@ -49,10 +49,4 @@ public class HealthBar : MonoBehaviour
     {
         SetHealth(45);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
