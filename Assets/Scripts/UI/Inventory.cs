@@ -2,36 +2,67 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEditor;
 
 public class Inventory : MonoBehaviour
 {
    private const int SLOTS = 9;
 
-   private List<IInventoryItem> mItems = new List<IInventoryItem>();
+   private IList<InventorySlot> mSlots = new List<InventorySlot>();
 
    public event EventHandler<InventoryEventArgs> ItemAdded;
    public event EventHandler<InventoryEventArgs> ItemRemoved;
    public event EventHandler<InventoryEventArgs> ItemUsed;
+   
+   public Inventory()
+   {
+      for (int i = 0; i < SLOTS; i++)
+      {
+         mSlots.Add(new InventorySlot(i));
+      }
+   }
+
+   private InventorySlot FindStackableSlot(IInventoryItem item)
+   {
+      foreach (InventorySlot slot in mSlots)
+      {
+         if (slot.isStackable(item))
+         {
+            return slot;
+         }
+      }
+      return null;
+   }
+
+   private InventorySlot FindNextEmptySlot()
+   {
+      foreach (InventorySlot slot in mSlots)
+      {
+         if (slot.isEmpty)
+         {
+            return slot;
+         }
+      }
+      return null;
+   }
 
 
    // Logica aplicada al quitar un objeto del inventario(de momento colisionanado).
    public void AddItem(IInventoryItem item)
    {
-      if (mItems.Count < SLOTS)
+      InventorySlot freeSlot = FindStackableSlot(item);
+      if (freeSlot == null)
       {
-         Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
-         if (collider.enabled)
+         freeSlot = FindNextEmptySlot();
+      }
+
+      if (freeSlot != null)
+      {
+         freeSlot.AddItem(item);
+
+         if (ItemAdded != null)
          {
-            collider.enabled = false;
-            
-            mItems.Add(item);
-            
-            item.OnPickup();
-            
-            if (ItemAdded != null)
-            {
-               ItemAdded(this, new InventoryEventArgs(item));
-            }
+            ItemAdded(this, new InventoryEventArgs(item));
          }
       }
    }
@@ -47,24 +78,16 @@ public class Inventory : MonoBehaviour
    // Logica aplicada al quitar un objeto del inventario(de momento arrastrando).
    public void RemoveItem(IInventoryItem item)
    {
-      if (mItems.Contains(item))
+      foreach (InventorySlot slot in mSlots)
       {
-         mItems.Remove(item);
-         
-         item.OnDrop();
-         
-         Collider collider = (item as MonoBehaviour).GetComponent<Collider>();
-         if (collider != null)
+         if (slot.Remove(item))
          {
-            collider.enabled = true;
-         }
-
-         if (ItemRemoved != null)
-         {
-            ItemRemoved(this, new InventoryEventArgs(item));
+            if (ItemRemoved != null)
+            {
+               ItemRemoved(this, new InventoryEventArgs(item));
+            }
+            break;
          }
       }
    }
-
-   
 }
