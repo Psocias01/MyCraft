@@ -4381,6 +4381,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 121707546739587715, guid: a32a334b61c36c2429354fbceb2655be, type: 3}
+      propertyPath: Health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 121707546739587715, guid: a32a334b61c36c2429354fbceb2655be, type: 3}
       propertyPath: Inventory
       value: 
       objectReference: {fileID: 1044793749}

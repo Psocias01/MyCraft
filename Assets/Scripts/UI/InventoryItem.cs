@@ -6,12 +6,11 @@ using System;
 public interface IInventoryItem
 {
     string Name { get; }
-    
     Sprite Image { get; }
-    
     void OnPickup();
     void OnDrop();
     void OnUse();
+    InventorySlot Slot { get; set; }
 }
 
 public class InventoryEventArgs : EventArgs

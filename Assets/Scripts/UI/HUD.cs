@@ -19,18 +19,32 @@ public class HUD : MonoBehaviour
     private void InventoryScript_ItemAdded(object sender, InventoryEventArgs e)
     {
         Transform inventoryPanel = transform.Find("InventoryPanel");
+        int index = -1;
         foreach (Transform slot in inventoryPanel)
         {
+            index++;
+            
             // Border... Image
             Transform imageTransform = slot.GetChild(0).GetChild(0);
-            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+            Transform textTransform = slot.GetChild(0).GetChild(1);
+            Image image = imageTransform.GetComponent<Image>();
+            Text txtCount = textTransform.GetComponent<Text>();
             ItemDragHandler itemDragHandler = imageTransform.GetComponent<ItemDragHandler>();
-            
-            // Encontramos un slot vacio
-            if (!image.enabled)
+
+            if (index == e.Item.Slot.Id)
             {
                 image.enabled = true;
                 image.sprite = e.Item.Image;
+
+                int itemCount = e.Item.Slot.Count;
+                if (itemCount > 1)
+                {
+                    txtCount.text = itemCount.ToString();
+                }
+                else
+                {
+                    txtCount.text = "";
+                }
                 
                 // Guardamos una referencia del objeto
                 itemDragHandler.Item = e.Item;

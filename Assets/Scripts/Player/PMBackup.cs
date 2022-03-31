@@ -2,12 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.EventSystems;
 
-public class PlayerMovement : MonoBehaviour
+public class PMBackup : MonoBehaviour
 {
     #region Public Members
 
@@ -120,43 +119,14 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (!isDead)
+        if (isDead)
         {
             // Metodo para dropear un item que tienes en la mano pulsando R Y que el currentItem NO sea null
             if (mCurrentItem != null && Input.GetKeyDown(KeyCode.R))
             {
-                Debug.Log("DROPEAMOS CON LA R");
-                DropCurrentItem();
-            }
-            else if (mCurrentItem == null && Input.GetKeyDown(KeyCode.R))
-            {
-                Debug.Log("NO PUEDES DROPEAR");
+                Debug.Log("Podemos Droppear");
             }
         }
-    }
-
-    private bool mLockPickup = false;
-    private void DropCurrentItem()
-    {
-        mLockPickup = true;
-        
-        GameObject goItem = (mCurrentItem as MonoBehaviour).gameObject;
-                
-        Inventory.RemoveItem(mCurrentItem);
-
-        Rigidbody rbItem = goItem.AddComponent<Rigidbody>();
-        rbItem.AddForce(transform.forward * 0.5f, ForceMode.Impulse);
-        
-        Invoke("DoDropItem", 0.25f);
-    }
-
-    public void DoDropItem()
-    {
-        mLockPickup = false;
-        
-        Destroy((mCurrentItem as MonoBehaviour).GetComponent<Rigidbody>());
-
-        mCurrentItem = null;
     }
     
     // Update is called once per frame
@@ -215,9 +185,6 @@ public class PlayerMovement : MonoBehaviour
         IInventoryItem item = other.GetComponent<IInventoryItem>();
         if (item != null)
         {
-            if(mLockPickup)
-                return;
-            
             mItemToPickup = item;
             HUD.OpenMessagePanel("");
         }
