@@ -61,7 +61,7 @@ Material:
     - _FoamTilling: 8.75
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _WaveIntensity: -0.18
+    - _WaveIntensity: 2.81
     - _WaveSpeed: -0.51
     m_Colors:
     - _FoamColor: {r: 1, g: 1, b: 1, a: 0}

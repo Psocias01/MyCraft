@@ -37,12 +37,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Offset_Espuma: 0.09
+    - _Distance_Profundidad: 0.589
+    - _Fuerza_Edge: 0.61
+    - _Offset_Espuma: 1.03
     - _Opacidad: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Water_Size: 1000
-    - _Waves: 0.1
+    - _Waves: 1
     m_Colors:
     - _Color_Base: {r: 0, g: 0.6851115, b: 1, a: 0}
     - _Color_Main_Espuma: {r: 1, g: 1, b: 1, a: 0}

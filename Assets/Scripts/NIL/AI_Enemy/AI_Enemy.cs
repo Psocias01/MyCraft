@@ -93,7 +93,7 @@ public class AI_Enemy : MonoBehaviour
        //_navMeshAgent.speed = 0;
        //_navMeshAgent.acceleration = 0;
        
-       transform.LookAt(player);
+       //transform.LookAt(player);
 
        if (!alreadyAttacked)
        {
