@@ -54,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
         mHealthBar = HUD.transform.Find("HealthBar").GetComponent<HealthBar>();
         mHealthBar.Min = 0;
         mHealthBar.Max = Health;
+        TakeDamage(55);
+
     }
 
     #region Health
@@ -82,6 +84,13 @@ public class PlayerMovement : MonoBehaviour
             // TO DO: _animator.SetTrigger("death") Activar animación de muerte.
             
         }
+    }
+    
+    public void Rehab(int healthPoints)
+    {
+        Health += healthPoints;
+
+        mHealthBar.SetHealth(Health);
     }
 
     #endregion
@@ -232,4 +241,6 @@ public class PlayerMovement : MonoBehaviour
             mItemToPickup = null;
         }
     }
+
+
 }
