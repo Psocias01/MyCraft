@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour
 {
    private const int SLOTS = 9;
 
-   private IList<InventorySlot> mSlots = new List<InventorySlot>();
+   public  IList<InventorySlot> mSlots = new List<InventorySlot>();
 
    public event EventHandler<InventoryEventArgs> ItemAdded;
    public event EventHandler<InventoryEventArgs> ItemRemoved;
@@ -19,6 +19,8 @@ public class Inventory : MonoBehaviour
       for (int i = 0; i < SLOTS; i++)
       {
          mSlots.Add(new InventorySlot(i));
+         //mSlots.Add(gameObject.AddComponent<InventorySlot>());
+         
       }
    }
 
@@ -40,6 +42,7 @@ public class Inventory : MonoBehaviour
       {
          if (slot.isEmpty)
          {
+            Debug.Log("Devolvemos slot");
             return slot;
          }
       }
@@ -50,14 +53,18 @@ public class Inventory : MonoBehaviour
    // Logica aplicada al quitar un objeto del inventario(de momento colisionanado).
    public void AddItem(IInventoryItem item)
    {
+      Debug.Log("Inicio ADDITEM");
       InventorySlot freeSlot = FindStackableSlot(item);
+      
+      
       if (freeSlot == null)
       {
          freeSlot = FindNextEmptySlot();
       }
-
-      if (freeSlot != null)
+      if (freeSlot.isEmpty)
       {
+         
+         freeSlot.isStackable(item);
          freeSlot.AddItem(item);
 
          if (ItemAdded != null)

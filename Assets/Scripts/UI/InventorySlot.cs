@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class InventorySlot : MonoBehaviour
 {
-   private Stack<IInventoryItem> mItemStack = new Stack<IInventoryItem>();
+   public Stack<IInventoryItem> mItemStack = new Stack<IInventoryItem>();
 
    private int mId = 0;
 
@@ -23,6 +24,8 @@ public class InventorySlot : MonoBehaviour
    {
       item.Slot = this;
       mItemStack.Push(item);
+      Debug.Log("PUSH item stack");
+      
    }
 
    public IInventoryItem FirstItem
@@ -43,10 +46,14 @@ public class InventorySlot : MonoBehaviour
          return false;
       }
       
+      
       IInventoryItem first = mItemStack.Peek();
 
+      Debug.Log("FIRTS_name" + first.Name);
+      Debug.Log("Item_name" + item.Name);
       if (first.Name == item.Name)
       {
+         Debug.Log("HE ENTRADO TRUE");
          return true;
       }
       return false;

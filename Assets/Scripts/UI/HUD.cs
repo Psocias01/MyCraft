@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class HUD : MonoBehaviour
     void Start()
     {
         Inventory.ItemAdded += InventoryScript_ItemAdded;
-        Inventory.ItemRemoved += InventoryScript_ItemRemoved;
+        Inventory.ItemRemoved += Inventory_ItemRemoved;
     }
 
     private void InventoryScript_ItemAdded(object sender, InventoryEventArgs e)
@@ -54,27 +55,50 @@ public class HUD : MonoBehaviour
         }
     }
     
-    private void InventoryScript_ItemRemoved(object sender, InventoryEventArgs e)
+    private void Inventory_ItemRemoved(object sender, InventoryEventArgs e)
     {
         Transform inventoryPanel = transform.Find("InventoryPanel");
+
+        int index = -1;
         foreach (Transform slot in inventoryPanel)
         {
-            // Border + Image
+            index++;
+
             Transform imageTransform = slot.GetChild(0).GetChild(0);
-            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+            Transform textTransform = slot.GetChild(0).GetChild(1);
+
+            Image image = imageTransform.GetComponent<Image>();
+            Text txtCount = textTransform.GetComponent<Text>();
+
             ItemDragHandler itemDragHandler = imageTransform.GetComponent<ItemDragHandler>();
 
-            if (itemDragHandler.Item != null)
+            // We found the item in the UI
+            if (itemDragHandler.Item == null)
+                continue;
+
+            // Found the slot to remove from
+            if(e.Item.Slot.Id == index)
             {
-                // Encontramos el ITEM en la UI
-                if (itemDragHandler.Item.Equals(e.Item))
+                int itemCount = e.Item.Slot.Count;
+                itemDragHandler.Item = e.Item.Slot.FirstItem;
+
+                if(itemCount < 2)
+                {
+                    txtCount.text = "";
+                }
+                else
+                {
+                    txtCount.text = itemCount.ToString();
+                }
+
+                if(itemCount == 0)
                 {
                     image.enabled = false;
                     image.sprite = null;
-                    itemDragHandler.Item = null;
-                    break;
                 }
+                break;
             }
+           
         }
     }
 
