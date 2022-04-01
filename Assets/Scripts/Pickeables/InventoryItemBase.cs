@@ -29,9 +29,7 @@ public class InventoryItemBase : MonoBehaviour, IInventoryItem
         transform.localPosition = PickPosition;
         transform.localEulerAngles = PickRotation;
     }
-
-    public InventorySlot Slot { get; set; }
-
+    
     public virtual void OnPickup()
     {
         gameObject.SetActive(false);
