@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8232974096068569869}
   - component: {fileID: 1856478137308966441}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pasarela
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 2712204077698981509}
   - component: {fileID: 7624619436009329125}
   - component: {fileID: 6810164206510457888}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 5527918084414405597}
   - component: {fileID: 4070244533332908694}
   - component: {fileID: 8244517372849144285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 5684605570921806638}
   - component: {fileID: 5794346793180910847}
   - component: {fileID: 4070939241072915649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

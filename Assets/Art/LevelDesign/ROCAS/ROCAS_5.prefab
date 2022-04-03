@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2329995110547836512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ROCAS_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,9 +23,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3106954439004099802}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -189.52701, y: 24.888887, z: -264.6718}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 11.727879, y: 11.727879, z: 11.727879}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2892993247822806840}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 68351533887440498}
   - component: {fileID: 3591461800708006630}
   - component: {fileID: 3208764191192229762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

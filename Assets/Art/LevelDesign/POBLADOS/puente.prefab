@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8134184563595148253}
   - component: {fileID: 3898431143564698188}
   - component: {fileID: 4571518491861846551}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6496686402091952054}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: puente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ Transform:
   m_GameObject: {fileID: 5864545914579680524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -287.21973, y: 26.085163, z: -2.7342062}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2828, y: 1.2828, z: 1.6351851}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7280603197103151600}
