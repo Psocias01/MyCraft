@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,6 +11,12 @@ public class AI_Enemy : MonoBehaviour
    [SerializeField] private float speed;
    [SerializeField] private float runSpeed;
    [SerializeField] private LayerMask player_mask;
+   public int enemy_Health;
+   public int enemy_MaxHealth = 100;
+
+   private bool isAlive = true;
+   
+   
    private NavMeshAgent _navMeshAgent;
    private Animator _animator;
    private Transform player;
@@ -22,6 +29,7 @@ public class AI_Enemy : MonoBehaviour
 
    [SerializeField] public float timeBetweenAttacks;
    private bool alreadyAttacked;
+   public Collider AttackCollider;
    
    //States
    [SerializeField] public float sightRange, attackRange;
@@ -30,7 +38,7 @@ public class AI_Enemy : MonoBehaviour
    private void Awake()
    {
       _navMeshAgent = GetComponent<NavMeshAgent>();
-      //_animator = GetComponent<Animator>();
+      _animator = GetComponent<Animator>();
 
       player = GameObject.FindGameObjectWithTag("Player").transform;
    }
@@ -38,6 +46,8 @@ public class AI_Enemy : MonoBehaviour
    void Start()
    {
        _navMeshAgent.SetDestination(waypoints[currentWaypointIndex].position);
+       enemy_Health = enemy_MaxHealth;
+       isAlive = true;
    }
    void Update()
    {
@@ -58,8 +68,26 @@ public class AI_Enemy : MonoBehaviour
        {
            AttackPlayer();
        }
+
+       if (!isAlive)
+       {
+           
+       }
    }
 
+   public void TakeDamage(int damage)
+   {
+       // Activar animación de recibir daño (opcional).
+       
+       enemy_Health -= damage;
+       
+       if (enemy_Health <= 0)
+       {
+           // TO DO: Activar shader de muerte
+           gameObject.SetActive(false);
+       }
+   }
+   
    private void Patroling()
    {
        _navMeshAgent.SetDestination(waypoints[currentWaypointIndex].position);
@@ -90,10 +118,6 @@ public class AI_Enemy : MonoBehaviour
    private void AttackPlayer()
    {
        _navMeshAgent.SetDestination(player.position);
-       //_navMeshAgent.speed = 0;
-       //_navMeshAgent.acceleration = 0;
-       
-       //transform.LookAt(player);
 
        if (!alreadyAttacked)
        {
@@ -105,6 +129,8 @@ public class AI_Enemy : MonoBehaviour
            Invoke(nameof(ResetAttack), timeBetweenAttacks);
        }
    }
+   
+   
 
    private void ResetAttack()
    {

@@ -38,6 +38,7 @@ public class DamageSource : MonoBehaviour
             {
                 // Logica de daño una sola vez
                 player.TakeDamage(DamageAmount);
+                Debug.Log("Haciendo Daño");
             }
         }
     }

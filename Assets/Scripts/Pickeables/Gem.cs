@@ -16,4 +16,6 @@ public class Gem : InventoryItemBase
         // TO DO: Que haga algo el objeto.
         base.OnUse();
     }
+
+    
 }
