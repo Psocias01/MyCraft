@@ -214,8 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Image: {fileID: 21300000, guid: b35a2854840ed1047988197456ad22cb, type: 3}
-  PickPosition: {x: -0.57, y: -2.49, z: -0.53}
-  PickRotation: {x: -184.7, y: 0, z: 192.988}
+  PickPosition: {x: 0.239, y: 0.086, z: 0.284}
+  PickRotation: {x: -263.193, y: 143.903, z: 323.71}
   DropRotation: {x: -90, y: 0, z: 90}
 --- !u!65 &4221438371247063357
 BoxCollider:

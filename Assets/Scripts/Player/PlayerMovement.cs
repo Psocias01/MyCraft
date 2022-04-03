@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     
     public GameObject Hand;
 
+    public Animator _anim;
+
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
@@ -89,8 +91,14 @@ public class PlayerMovement : MonoBehaviour
     public void Rehab(int healthPoints)
     {
         Health += healthPoints;
-
+        
+        if (Health > 100)
+        {
+            Health = 100;
+        }
+        
         mHealthBar.SetHealth(Health);
+
     }
 
     #endregion
@@ -185,7 +193,7 @@ public class PlayerMovement : MonoBehaviour
             if (mCurrentItem != null && Input.GetMouseButtonDown(0))
             {
                 // TO DO: Definir que acción invidual hará cada item.
-                //_animator.SetTrigger("Attack_1");
+                _anim.SetTrigger("Attack");
             }
             
             
