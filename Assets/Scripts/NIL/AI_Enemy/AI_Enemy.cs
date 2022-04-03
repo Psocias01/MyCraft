@@ -29,8 +29,7 @@ public class AI_Enemy : MonoBehaviour
 
    [SerializeField] public float timeBetweenAttacks;
    private bool alreadyAttacked;
-   public Collider AttackCollider;
-   
+
    //States
    [SerializeField] public float sightRange, attackRange;
    private bool playerInSightRange, playerInAttackRange;
@@ -71,7 +70,7 @@ public class AI_Enemy : MonoBehaviour
 
        if (!isAlive)
        {
-           
+           gameObject.SetActive(false);
        }
    }
 
@@ -124,7 +123,7 @@ public class AI_Enemy : MonoBehaviour
            alreadyAttacked = true;
            Debug.Log("Atack");
            
-           //_animator.SetTrigger("isAttacking");
+           _animator.SetTrigger("Attack");
            
            Invoke(nameof(ResetAttack), timeBetweenAttacks);
        }
