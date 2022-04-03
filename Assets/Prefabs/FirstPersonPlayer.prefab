@@ -295,7 +295,6 @@ GameObject:
   - component: {fileID: 1081235948}
   - component: {fileID: 1081235953}
   - component: {fileID: 8010130924214101152}
-  - component: {fileID: 1763609182}
   m_Layer: 3
   m_Name: FirstPersonPlayer
   m_TagString: Player
@@ -355,6 +354,7 @@ MonoBehaviour:
   Inventory: {fileID: 0}
   HUD: {fileID: 0}
   Hand: {fileID: 5046780754262876428}
+  _anim: {fileID: 5866666021924122560}
   speed: 30
   gravity: -19.62
   jumpHeight: 3
@@ -424,26 +424,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 4, z: 3}
   m_Center: {x: 0, y: -0.25, z: 0}
---- !u!95 &1763609182
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121707546739587716}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: ea0646eddb2e5d543a1ccae468fd37f8, type: 3}
-  m_Controller: {fileID: 9100000, guid: 97914556013464f43a5d96aa74e2be83, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5046780754262876428
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,5 +632,10 @@ Transform:
 --- !u!4 &2303144494855661324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2303144494903604573, guid: d320429b2087e094bb665f78458d28f9, type: 3}
+  m_PrefabInstance: {fileID: 124031569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5866666021924122560 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: d320429b2087e094bb665f78458d28f9, type: 3}
   m_PrefabInstance: {fileID: 124031569}
   m_PrefabAsset: {fileID: 0}
