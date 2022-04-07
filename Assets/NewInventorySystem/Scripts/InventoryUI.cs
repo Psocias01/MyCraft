@@ -18,10 +18,13 @@ public class InventoryUI : MonoBehaviour
     public GameObject itemSlotPrefab;
     public Transform inventoryItemTransform;
 
+    public Transform craftingItemTransform;
+
     private void Start()
     {
         Inventory.instance.onItemChange += UpdateInventoryUI;
         UpdateInventoryUI();
+        SetUpCraftingRecipes();
     }
 
     // Update is called once per frame
@@ -39,6 +42,18 @@ public class InventoryUI : MonoBehaviour
                 // Open
                 OpenInventory();
             }
+        }
+    }
+
+    private void SetUpCraftingRecipes()
+    {
+        List<Item> craftingRecipes = GameManager.GM.craftingRecipes;
+
+        foreach (Item recipie in craftingRecipes)
+        {
+            GameObject GO = Instantiate(itemSlotPrefab, craftingItemTransform);
+            ItemSlot slot = GO.GetComponent<ItemSlot>();
+            slot.AddItem(recipie);
         }
     }
 

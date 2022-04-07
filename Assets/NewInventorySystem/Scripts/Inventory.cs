@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -28,5 +29,41 @@ public class Inventory : MonoBehaviour
     {
         inventoryItemList.Add(item);
         onItemChange.Invoke();
+    }
+
+    public void RemoveItem(Item item)
+    {
+        inventoryItemList.Remove(item);
+        onItemChange.Invoke();
+    }
+
+    public bool ContainsItem(Item item, int amount)
+    {
+        int itemCounter = 0;
+
+        foreach (Item i in inventoryItemList)
+        {
+            if (i == item)
+            {
+                itemCounter++;
+            }
+        }
+
+        if (itemCounter >= amount)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void RemoveItems(Item item, int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            RemoveItem(item);
+        }
     }
 }
