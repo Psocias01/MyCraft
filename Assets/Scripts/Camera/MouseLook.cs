@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,13 @@ public class MouseLook : MonoBehaviour
 
     private float xRotation = 0f;
 
-    private bool cursorLocked = false;
-    
+    private bool cursorLocked = true;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     // Update is called once per frame
     void Update()
     {

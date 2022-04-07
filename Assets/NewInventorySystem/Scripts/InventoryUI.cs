@@ -12,6 +12,7 @@ public class InventoryUI : MonoBehaviour
     public GameObject inventoryParent;
     public GameObject inventoryTab;
     public GameObject craftingTab;
+    public GameObject messagePanel;
 
     private List<ItemSlot> itemSlotList = new List<ItemSlot>();
     public GameObject itemSlotPrefab;
@@ -26,7 +27,7 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (InventoryOpen)
             {
@@ -117,5 +118,15 @@ public class InventoryUI : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+    }
+    
+    public void OpenMessagePanel(string text)
+    {
+        messagePanel.SetActive(true);
+    }
+
+    public void CloseMessagePanel()
+    {
+        messagePanel.SetActive(false);
     }
 }
