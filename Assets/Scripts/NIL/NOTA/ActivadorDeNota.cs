@@ -17,6 +17,7 @@ public class ActivadorDeNota : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && activa == true)
         {
             notaVisual.SetActive(true);
+            CloseMessagePanel();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && activa == true)
@@ -31,6 +32,7 @@ public class ActivadorDeNota : MonoBehaviour
         if (other.tag == "Player")
         {
             activa = true;
+            OpenMessagePanel();
         }
     }
     
@@ -40,10 +42,11 @@ public class ActivadorDeNota : MonoBehaviour
         {
             activa = false;
             notaVisual.SetActive(false);
+            CloseMessagePanel();
         }
     }
     
-    public void OpenMessagePanel(string text)
+    public void OpenMessagePanel()
     {
         textLetra.SetActive(true);
     }
