@@ -12,7 +12,7 @@ public class AreaHealing : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GameManager.Instance.Player.Rehab(HealthPoints);
+            GameManager.GM.Player.Rehab(HealthPoints);
         }
     }
 }

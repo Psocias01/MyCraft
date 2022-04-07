@@ -16,7 +16,7 @@ public class ItemDropHandler : MonoBehaviour, IDropHandler
             if(item != null)
             {
                 Debug.Log("Item Droped");
-                _Inventory.RemoveItem(item);
+                //_Inventory.RemoveItem(item);
                 item.OnDrop();
             }
         }

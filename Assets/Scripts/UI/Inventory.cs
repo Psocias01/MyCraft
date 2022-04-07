@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEditor;
-
+/*
 public class Inventory : MonoBehaviour
 {
    private const int SLOTS = 9;
@@ -77,3 +77,4 @@ public class Inventory : MonoBehaviour
       }
    }
 }
+*/

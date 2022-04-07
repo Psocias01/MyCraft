@@ -50,8 +50,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         Controller = GetComponent<CharacterController>();
-        Inventory.ItemUsed += Inventory_ItemUsed;
-        Inventory.ItemRemoved += Inventory_ItemRemoved;
+  //      Inventory.ItemUsed += Inventory_ItemUsed;
+  //      Inventory.ItemRemoved += Inventory_ItemRemoved;
 
         mHealthBar = HUD.transform.Find("HealthBar").GetComponent<HealthBar>();
         mHealthBar.Min = 0;
@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
     
-    private void Inventory_ItemRemoved(object sender, InventoryEventArgs e)
+    /*private void Inventory_ItemRemoved(object sender, InventoryEventArgs e)
     {
         IInventoryItem item = e.Item;
         
@@ -174,7 +174,7 @@ public class PlayerMovement : MonoBehaviour
         Destroy((mCurrentItem as MonoBehaviour).GetComponent<Rigidbody>());
 
         mCurrentItem = null;
-    }
+    }*/
     
     // Update is called once per frame
     void Update()
@@ -182,12 +182,12 @@ public class PlayerMovement : MonoBehaviour
         if (!isDead)
         {
             // Metodo para recoger objetos si estamos en su radio de recogida.
-            if (mItemToPickup != null && Input.GetKeyDown(KeyCode.F))
+            /*if (mItemToPickup != null && Input.GetKeyDown(KeyCode.F))
             {
                 Inventory.AddItem(mItemToPickup);
                 mItemToPickup.OnPickup();
                 HUD.CloseMessagePanel();
-            }
+            }*/
             
             // Ejecutar la accion deseada cuando el item deseado está activo.
             if (mCurrentItem != null && Input.GetMouseButtonDown(0))
@@ -226,10 +226,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private IInventoryItem mItemToPickup = null;
+    //private IInventoryItem mItemToPickup = null;
     private void OnTriggerEnter(Collider other)
     {
-        IInventoryItem item = other.GetComponent<IInventoryItem>();
+        /*IInventoryItem item = other.GetComponent<IInventoryItem>();
         if (item != null)
         {
             if(mLockPickup)
@@ -237,17 +237,17 @@ public class PlayerMovement : MonoBehaviour
             
             mItemToPickup = item;
             HUD.OpenMessagePanel("");
-        }
+        }*/
     }
 
     private void OnTriggerExit(Collider other)
     {
-        IInventoryItem item = other.GetComponent<IInventoryItem>();
+        /*IInventoryItem item = other.GetComponent<IInventoryItem>();
         if (item != null)
         {
             HUD.CloseMessagePanel();
             mItemToPickup = null;
-        }
+        }*/
     }
 
 
