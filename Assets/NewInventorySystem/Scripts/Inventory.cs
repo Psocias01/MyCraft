@@ -29,12 +29,15 @@ public class Inventory : MonoBehaviour
     {
         inventoryItemList.Add(item);
         onItemChange.Invoke();
+        //Debug.Log("Item Added");
+
     }
 
     public void RemoveItem(Item item)
     {
         inventoryItemList.Remove(item);
         onItemChange.Invoke();
+        //Debug.Log("Item Removed");
     }
 
     public bool ContainsItem(Item item, int amount)

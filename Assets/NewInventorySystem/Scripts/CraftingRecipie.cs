@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,12 @@ using UnityEngine;
 public class CraftingRecipie : Item
 {
     public Item result;
-    public Ingredient[] Ingredients;
+    public Ingredient[] ingredients;
 
     private bool CanCraft()
     {
         // Le preguntamos al script de Inventory si tenemos los recursos necesarios
-        foreach (Ingredient ingredient in Ingredients)
+        foreach (Ingredient ingredient in ingredients)
         {
             bool containsCurrentIngredient = Inventory.instance.ContainsItem(ingredient.item, ingredient.amount);
 
@@ -27,7 +28,7 @@ public class CraftingRecipie : Item
 
     private void RemoveIngredientsFromInventory()
     {
-        foreach (Ingredient ingredient in Ingredients)
+        foreach (Ingredient ingredient in ingredients)
         {
             Inventory.instance.RemoveItems(ingredient.item, ingredient.amount);
         }
@@ -48,6 +49,19 @@ public class CraftingRecipie : Item
         {
             Debug.Log("No tienes los objetos necesarios para crear: " + result.name);
         }
+    }
+
+    public override string GetItemDescription()
+    {
+        string itemIngredients = "";
+
+        foreach (Ingredient ingredient in ingredients)
+        {
+            itemIngredients += "- " + ingredient.amount + " " + ingredient.item.name + "\n";
+        }
+
+        return itemIngredients;
+
     }
     
     [System.Serializable]

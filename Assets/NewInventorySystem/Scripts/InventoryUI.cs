@@ -15,9 +15,11 @@ public class InventoryUI : MonoBehaviour
     public GameObject messagePanel;
 
     private List<ItemSlot> itemSlotList = new List<ItemSlot>();
-    public GameObject itemSlotPrefab;
+    
+    public GameObject inventorySlotPrefab;
+    public GameObject craftingSlotPrefab;
+    
     public Transform inventoryItemTransform;
-
     public Transform craftingItemTransform;
 
     private void Start()
@@ -47,11 +49,11 @@ public class InventoryUI : MonoBehaviour
 
     private void SetUpCraftingRecipes()
     {
-        List<Item> craftingRecipes = GameManager.GM.craftingRecipes;
+        List<Item> craftingRecipes = GameManager.instance.craftingRecipes;
 
         foreach (Item recipie in craftingRecipes)
         {
-            GameObject GO = Instantiate(itemSlotPrefab, craftingItemTransform);
+            GameObject GO = Instantiate(craftingSlotPrefab, craftingItemTransform);
             ItemSlot slot = GO.GetComponent<ItemSlot>();
             slot.AddItem(recipie);
         }
@@ -61,17 +63,17 @@ public class InventoryUI : MonoBehaviour
     {
         int currentItemCount = Inventory.instance.inventoryItemList.Count;
 
-        if (currentItemCount > itemSlotList.Count)
+        if(currentItemCount > itemSlotList.Count)
         {
-            //Añadimos ItemSlots
+            //Add more item slots
             AddItemSlots(currentItemCount);
         }
 
-        for (int i = 0; i < itemSlotList.Count; i++)
+        for(int i = 0; i < itemSlotList.Count; ++i)
         {
-            if (i <= currentItemCount)
+            if(i < currentItemCount)
             {
-                // Actualizamos el item actual del slot
+                //update the current item in the slot
                 itemSlotList[i].AddItem(Inventory.instance.inventoryItemList[i]);
             }
             else
@@ -86,9 +88,9 @@ public class InventoryUI : MonoBehaviour
     {
         int amount = currentItemCount - itemSlotList.Count;
 
-        for (int i = 0; i < amount; i++)
+        for (int i = 0; i < amount; ++i)
         {
-            GameObject GO = Instantiate(itemSlotPrefab, inventoryItemTransform);
+            GameObject GO = Instantiate(inventorySlotPrefab, inventoryItemTransform);
             ItemSlot newSlot = GO.GetComponent<ItemSlot>();
             itemSlotList.Add(newSlot);
         }

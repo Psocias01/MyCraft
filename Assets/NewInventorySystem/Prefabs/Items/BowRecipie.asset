@@ -15,8 +15,8 @@ MonoBehaviour:
   name: Bow Recipie
   icon: {fileID: 21300000, guid: 0ad2f1f2ee18ea641b2c79454fe91dfe, type: 3}
   result: {fileID: 11400000, guid: 4c2892416acbf73429c1e52d7cf0e867, type: 2}
-  Ingredients:
-  - item: {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}
-    amount: 1
+  ingredients:
   - item: {fileID: 11400000, guid: 860401e4a70a28a4e9d2170999666810, type: 2}
     amount: 2
+  - item: {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}
+    amount: 1

@@ -12,7 +12,7 @@ public class StatItem : Item
     {
         base.Use();
         // Añadimos algo
-        GameManager.GM.OnStateItemUse(itemType, amount);
+        GameManager.instance.OnStateItemUse(itemType, amount);
         Inventory.instance.RemoveItem(this);
     }
 }
