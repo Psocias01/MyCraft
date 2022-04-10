@@ -13,10 +13,23 @@ public class ItemSlot : MonoBehaviour
         item = newItem;
         Icon.sprite = newItem.icon;
     }
+
+    public void ClearSlot()
+    {
+        item = null;
+        Icon.sprite = null;
+    }
     
     public void UseItem()
     {
-        if (item != null)
+        if (item == null) return;
+
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            Debug.Log("Trying to switch");
+            Inventory.instance.SwitchHotbarInventory(item);
+        }
+        else
         {
             item.Use();
         }
@@ -37,11 +50,15 @@ public class ItemSlot : MonoBehaviour
 
     public void OnCursorEnter()
     {
+        if (item == null) return;
+        
         GameManager.instance.DisplayItemInfo(item.name, item.GetItemDescription(), transform.position);
     }
     
     public void OnCursorExit()
     {
+        if (item == null) return;
+        
         GameManager.instance.DestroyItemInfo();
     }
 

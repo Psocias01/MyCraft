@@ -24,7 +24,45 @@ public class Inventory : MonoBehaviour
     public OnItemChange onItemChange = delegate {};
 
     public List<Item> inventoryItemList = new List<Item>();
+    
+    public List<Item> hotbarItemList = new List<Item>();
+    public HotbarController hotbarController;
 
+
+    public void SwitchHotbarInventory(Item item)
+    {
+        foreach (Item i in inventoryItemList)
+        {
+            if (i == item)
+            {
+                if (hotbarItemList.Count >= hotbarController.HotbarSlotSize)
+                {
+                    Debug.Log("No more slots available in hotbar");
+                }
+                else
+                {
+                    hotbarItemList.Add(item);
+                    inventoryItemList.Remove(item);
+                    onItemChange.Invoke();
+                }
+                
+                return;
+            }
+        }
+        
+        // Devolver los items al inventory
+        foreach (Item i in hotbarItemList)
+        {
+            if (i == item)
+            {
+                hotbarItemList.Remove(item);
+                inventoryItemList.Add(item);
+                onItemChange.Invoke();
+                
+                return;
+            }
+        }
+    }
     public void AddItem(Item item)
     {
         inventoryItemList.Add(item);
@@ -35,7 +73,14 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(Item item)
     {
-        inventoryItemList.Remove(item);
+        if (inventoryItemList.Contains(item))
+        {
+            inventoryItemList.Remove(item);
+        }
+        else if (hotbarItemList.Contains(item))
+        {
+            hotbarItemList.Remove(item);
+        }
         onItemChange.Invoke();
         //Debug.Log("Item Removed");
     }

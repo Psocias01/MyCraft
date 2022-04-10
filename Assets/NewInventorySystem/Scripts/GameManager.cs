@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -34,7 +35,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Inventory.instance.AddItem(itemList[Random.Range(0, itemList.Count)]);
+            Item newItem = itemList[Random.Range(0, itemList.Count)];
+            Inventory.instance.AddItem(Instantiate(newItem));
         }
     }
 
