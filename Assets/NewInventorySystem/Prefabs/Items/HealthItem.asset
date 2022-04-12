@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: HealthPack
   icon: {fileID: 21300000, guid: 0f6b594d310c7bd4286c4068c299af24, type: 3}
+  itemDescription: + 25 de vida
   itemType: 0
   amount: 25
