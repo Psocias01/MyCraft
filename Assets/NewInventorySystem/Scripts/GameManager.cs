@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     public GameObject itemInfoPrefab;
     private GameObject currentItemInfo = null;
 
+    public Transform mainCanvas;
+    public Transform HotbarTransform;
+    
     public float moveX = 0f;
     public float moveY = 0f;
     private void Update()

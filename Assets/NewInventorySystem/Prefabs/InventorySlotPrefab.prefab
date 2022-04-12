@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3806517682924235959}
   - component: {fileID: -6462919647558301604}
   - component: {fileID: -2524021407910901371}
+  - component: {fileID: 8970387129721786503}
   m_Layer: 5
   m_Name: InventorySlotPrefab
   m_TagString: Untagged
@@ -194,6 +195,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &8970387129721786503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675272057043298587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9f46ec6fe6dca47ad2f76c518d0c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3585834165797144882
 GameObject:
   m_ObjectHideFlags: 0

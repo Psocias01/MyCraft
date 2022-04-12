@@ -7,6 +7,9 @@ public class ItemSlot : MonoBehaviour
 {
     public Image Icon;
     private Item item;
+    public bool isBeingDraged = false;
+
+    public Item Item => item;
 
     public void AddItem(Item newItem)
     {
@@ -22,7 +25,7 @@ public class ItemSlot : MonoBehaviour
     
     public void UseItem()
     {
-        if (item == null) return;
+        if (item == null || isBeingDraged) return;
 
         if (Input.GetKey(KeyCode.LeftAlt))
         {
@@ -50,7 +53,7 @@ public class ItemSlot : MonoBehaviour
 
     public void OnCursorEnter()
     {
-        if (item == null) return;
+        if (item == null|| isBeingDraged) return;
         
         GameManager.instance.DisplayItemInfo(item.name, item.GetItemDescription(), transform.position);
     }
