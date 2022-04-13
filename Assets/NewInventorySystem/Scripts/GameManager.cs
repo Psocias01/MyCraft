@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     public Transform mainCanvas;
     public Transform HotbarTransform;
+    public Transform inventoryTransform;
     
     public float moveX = 0f;
     public float moveY = 0f;

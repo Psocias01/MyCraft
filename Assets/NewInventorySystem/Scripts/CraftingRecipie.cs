@@ -15,7 +15,7 @@ public class CraftingRecipie : Item
         // Le preguntamos al script de Inventory si tenemos los recursos necesarios
         foreach (Ingredient ingredient in ingredients)
         {
-            bool containsCurrentIngredient = Inventory.instance.ContainsItem(ingredient.item, ingredient.amount);
+            bool containsCurrentIngredient = Inventory.instance.ContainsItem(ingredient.item.name, ingredient.amount);
 
             if (!containsCurrentIngredient)
             {
@@ -30,7 +30,7 @@ public class CraftingRecipie : Item
     {
         foreach (Ingredient ingredient in ingredients)
         {
-            Inventory.instance.RemoveItems(ingredient.item, ingredient.amount);
+            Inventory.instance.RemoveItems(ingredient.item.name, ingredient.amount);
         }
     }
 

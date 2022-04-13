@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Icon: {fileID: 2457411699191530637}
+  isBeingDraged: 0
 --- !u!114 &-2524021407910901371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9f46ec6fe6dca47ad2f76c518d0c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previewPrefab: {fileID: 675272057043298587, guid: 7ba73c8725b63dc448785d6bfb03f73a, type: 3}
 --- !u!1 &3585834165797144882
 GameObject:
   m_ObjectHideFlags: 0
