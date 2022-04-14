@@ -1,0 +1,547 @@
+fileFormatVersion: 2
+guid: e82b1c9e7c4d6e14499575db8fe734ad
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 30
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Goblin_Amigo_Rigging_OK:Spine_Root_jnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Hip_L_jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Hip_R_jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Knee_L_jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Knee_R_jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Ankle_L_jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Ankle_R_jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Spine_1_jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Spine_2_jnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Head_jnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Shoulder_L_jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Shoulder_R_jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Elbow_L_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Elbow_R_jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Wrist_L_jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Wrist_R_jnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Foot_L_jnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Foot_R_jnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Thumb_Base_L_jnt
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Thumb_Mid_L_jnt
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Middle_Base_L_jnt
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Middle_Mid_L_jnt
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Middle_Tip_L_jnt
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Thumb_Base_R_jnt
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Thumb_Mid_R_jnt
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Middle_Base_R_jnt
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Middle_Mid_R_jnt
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Middle_Tip_R_jnt
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Goblin_Amigo_Rigging_OK:Chest_jnt
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: GoblinAmigo_Prueba(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Geo_GRP
+      parentName: GoblinAmigo_Prueba(Clone)
+      position: {x: -0, y: -3.0334518e-10, z: -2.4679363e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Goblin_Nil_L_UV1:polySurface1
+      parentName: Goblin_Amigo_Rigging_OK:Geo_GRP
+      position: {x: -0, y: 0.0073634107, z: -0.0025195442}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Rig_Grp
+      parentName: GoblinAmigo_Prueba(Clone)
+      position: {x: -0, y: -3.0334518e-10, z: -2.4679363e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Base_Skeleton
+      parentName: Goblin_Amigo_Rigging_OK:Rig_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Spine_Root_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Base_Skeleton
+      position: {x: 0, y: 0.013736864, z: -0.0025195442}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Spine_1_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Spine_Root_jnt
+      position: {x: -0, y: 0.0029999998, z: 0.00052090944}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Spine_2_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Spine_1_jnt
+      position: {x: -0.0029999998, y: -3.3306688e-19, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Chest_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Spine_2_jnt
+      position: {x: -0.0029999998, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Head_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Chest_jnt
+      position: {x: -0.0059999996, y: 3.3306688e-19, z: 0}
+      rotation: {x: -0, y: -0, z: -0.36679924, w: 0.9303001}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Head_mid_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Head_jnt
+      position: {x: -0.0049857376, y: -7.9936054e-18, z: 2.9582282e-34}
+      rotation: {x: -0, y: -0, z: -0.073296845, w: -0.9973102}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+    - name: Goblin_Amigo_Rigging_OK:Head_end_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Head_mid_jnt
+      position: {x: -0.008784903, y: -2.664535e-18, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000002}
+    - name: Goblin_Amigo_Rigging_OK:Shoulder_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Chest_jnt
+      position: {x: -0.00076553755, y: -0.0002758907, z: -0.007025511}
+      rotation: {x: 0.68746436, y: 0.006892932, z: 0.7250037, w: -0.041411366}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: Goblin_Amigo_Rigging_OK:Elbow_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Shoulder_R_jnt
+      position: {x: -0.0053300504, y: 0.00012989997, z: -0.00003667954}
+      rotation: {x: 0.02163163, y: 0.0036784615, z: 0.005509443, w: 0.9997441}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000002}
+    - name: Goblin_Amigo_Rigging_OK:Wrist_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Elbow_R_jnt
+      position: {x: -0.008487377, y: -2.6116085e-11, z: 1.2842954e-12}
+      rotation: {x: -0.013014427, y: -0.041842207, z: 0.011606758, w: 0.998972}
+      scale: {x: 1.0000004, y: 1.0000002, z: 0.99999994}
+    - name: Goblin_Amigo_Rigging_OK:Middle_Base_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Wrist_R_jnt
+      position: {x: -0.0039409664, y: -1.6653344e-18, z: 2.664535e-18}
+      rotation: {x: 0.07131117, y: 0.06705075, z: -0.02080041, w: 0.9949805}
+      scale: {x: 1, y: 1.0000007, z: 1.0000005}
+    - name: Goblin_Amigo_Rigging_OK:Middle_Mid_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Middle_Base_R_jnt
+      position: {x: -0.0017593395, y: -4.6629362e-18, z: -7.9936054e-18}
+      rotation: {x: 0.000000037252896, y: -0.00000043213356, z: -0.041031294, w: 0.99915785}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Goblin_Amigo_Rigging_OK:Middle_Tip_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Middle_Mid_R_jnt
+      position: {x: -0.0011585732, y: 0, z: 1.3322675e-17}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Middle_Top_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Middle_Tip_R_jnt
+      position: {x: -0.0012799858, y: -2.664535e-18, z: 2.664535e-18}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Thumb_Base_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Wrist_R_jnt
+      position: {x: -0.0020813548, y: -0.00269042, z: 0.0014920295}
+      rotation: {x: 0.38067654, y: 0.24619932, z: 0.29435822, w: 0.84132314}
+      scale: {x: 1.0000001, y: 1.0000008, z: 1.0000007}
+    - name: Goblin_Amigo_Rigging_OK:Thumb_Mid_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Thumb_Base_R_jnt
+      position: {x: -0.0010489438, y: -2.664535e-18, z: -7.9936054e-18}
+      rotation: {x: 0.084244885, y: 0.02932652, z: 0.013791736, w: -0.995918}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1.0000001}
+    - name: Goblin_Amigo_Rigging_OK:Thumb_Top_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Thumb_Mid_R_jnt
+      position: {x: -0.0019371778, y: 0, z: -2.664535e-18}
+      rotation: {x: -0, y: -0, z: 0.0000000018626451, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000002}
+    - name: Goblin_Amigo_Rigging_OK:Shoulder_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Chest_jnt
+      position: {x: -0.0007655384, y: -0.00076529314, z: 0.0069891484}
+      rotation: {x: -0.017494274, y: 0.68867534, z: -0.023285208, w: -0.7244847}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Elbow_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Shoulder_L_jnt
+      position: {x: 0.0053744395, y: -0.00008866191, z: 0.000032209624}
+      rotation: {x: 0.021770634, y: 0.0049214363, z: 0.007862582, w: 0.99972}
+      scale: {x: 0.99999976, y: 0.99999976, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Wrist_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Elbow_L_jnt
+      position: {x: 0.008487372, y: 0.0000000024886757, z: 0.0000000057093175}
+      rotation: {x: -0.013014437, y: -0.04184217, z: 0.011606852, w: 0.99897206}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000004}
+    - name: Goblin_Amigo_Rigging_OK:Middle_Base_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Wrist_L_jnt
+      position: {x: 0.0039409837, y: -0.0000000060751546, z: -0.000000014163756}
+      rotation: {x: -0.07131135, y: -0.06705201, z: 0.020801965, w: -0.9949804}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: Goblin_Amigo_Rigging_OK:Middle_Mid_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Middle_Base_L_jnt
+      position: {x: 0.0017593213, y: 7.401532e-10, z: 2.3980816e-17}
+      rotation: {x: 0.000000014901161, y: 0.000000074505806, z: -0.04103105, w: 0.9991579}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
+    - name: Goblin_Amigo_Rigging_OK:Middle_Tip_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Middle_Mid_L_jnt
+      position: {x: 0.0011585699, y: -5.32907e-18, z: 0}
+      rotation: {x: -0, y: -0, z: -4.440891e-16, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Middle_Top_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Middle_Tip_L_jnt
+      position: {x: 0.0012799801, y: -1.3322675e-18, z: -1.3322675e-17}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Goblin_Amigo_Rigging_OK:Thumb_Base_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Wrist_L_jnt
+      position: {x: 0.002081357, y: 0.0026904158, z: -0.0014920186}
+      rotation: {x: -0.38214132, y: -0.24293932, z: -0.29644418, w: -0.84087414}
+      scale: {x: 1.0000002, y: 0.9999999, z: 1.0000004}
+    - name: Goblin_Amigo_Rigging_OK:Thumb_Mid_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Thumb_Base_L_jnt
+      position: {x: 0.0010489564, y: -0.0000000041119512, z: -0.000000021549988}
+      rotation: {x: -0.08424438, y: -0.0293175, z: -0.01379335, w: 0.9959182}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Goblin_Amigo_Rigging_OK:Thumb_Top_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Thumb_Mid_L_jnt
+      position: {x: 0.0019371833, y: 0.000000009118184, z: 0.0000000018151314}
+      rotation: {x: -0.0000000074505815, y: -0, z: -0, w: 1}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.99999994}
+    - name: Goblin_Amigo_Rigging_OK:Hip_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Spine_Root_jnt
+      position: {x: -0.0051279687, y: -0.0014004029, z: 0.0011083109}
+      rotation: {x: 0.51536703, y: 0.49192822, z: 0.38790992, w: 0.5847474}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Knee_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Hip_L_jnt
+      position: {x: -0.005804296, y: -0.000003996023, z: 0.00000056347653}
+      rotation: {x: 0.004199967, y: 0.057252288, z: 0.3157412, w: 0.9471072}
+      scale: {x: 1, y: 0.9999999, z: 0.9999998}
+    - name: Goblin_Amigo_Rigging_OK:Ankle_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Knee_L_jnt
+      position: {x: -0.004228562, y: -0.0000000044346344, z: 2.794564e-10}
+      rotation: {x: -0.011389905, y: -0.03344921, z: -0.037576806, w: 0.99866885}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Goblin_Amigo_Rigging_OK:Foot_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Ankle_L_jnt
+      position: {x: -0.0018595693, y: 0.002680252, z: -0.00028780467}
+      rotation: {x: -0.07446353, y: 0.057580374, z: -0.82618743, w: 0.5554764}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: Goblin_Amigo_Rigging_OK:Toe_L_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Foot_L_jnt
+      position: {x: -0.0034009474, y: 8.326672e-20, z: -2.664535e-18}
+      rotation: {x: -0, y: -0, z: 0.000000007450581, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Hip_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Spine_Root_jnt
+      position: {x: 0.0051279594, y: -0.0014004016, z: 0.0011083112}
+      rotation: {x: -0.5848883, y: 0.38768128, z: -0.49200237, w: 0.5153083}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: Goblin_Amigo_Rigging_OK:Knee_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Hip_R_jnt
+      position: {x: 0.0058006356, y: -0.0000014815041, z: 0.00000019658978}
+      rotation: {x: 0.0042000115, y: 0.057252333, z: 0.31574112, w: 0.94710726}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: Goblin_Amigo_Rigging_OK:Ankle_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Knee_R_jnt
+      position: {x: 0.004228567, y: -0.0000000032075784, z: -0.0000000058910627}
+      rotation: {x: 0.00504573, y: -0.040878464, z: -0.039925657, w: 0.99835336}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Goblin_Amigo_Rigging_OK:Foot_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Ankle_R_jnt
+      position: {x: 0.0018595697, y: -0.0026802518, z: 0.0002878016}
+      rotation: {x: 0.074463524, y: -0.057580344, z: 0.82618743, w: -0.55547637}
+      scale: {x: 1, y: 1.0000004, z: 1.0000002}
+    - name: Goblin_Amigo_Rigging_OK:Toe_R_jnt
+      parentName: Goblin_Amigo_Rigging_OK:Foot_R_jnt
+      position: {x: 0.0034009616, y: -7.0869616e-11, z: 0.0000000026374412}
+      rotation: {x: -0, y: 0.0000000037252899, z: -0.000000024214383, w: 1}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000004}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.29999998
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
