@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 6289930210086354129}
   - component: {fileID: 5032277030136567866}
   - component: {fileID: 4567206922985249251}
+  - component: {fileID: 1082496188881298242}
   m_Layer: 5
   m_Name: HotbarSlotPrefab
   m_TagString: Untagged
@@ -247,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Icon: {fileID: 4720721781117392107}
+  isBeingDraged: 0
 --- !u!114 &4567206922985249251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,3 +294,16 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1082496188881298242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693882929915689341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9f46ec6fe6dca47ad2f76c518d0c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previewPrefab: {fileID: 675272057043298587, guid: 7ba73c8725b63dc448785d6bfb03f73a, type: 3}

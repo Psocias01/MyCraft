@@ -27,8 +27,24 @@ public class Inventory : MonoBehaviour
     
     public List<Item> hotbarItemList = new List<Item>();
     public HotbarController hotbarController;
+    
+    public Transform itemPlacerTransform;
 
+    public void PlaceItem(GameObject itemToEquip)
+    {
+        if (itemPlacerTransform.childCount > 0)
+        {
+            Debug.Log("Hay un objeto instanciado");
+            Destroy(itemPlacerTransform.GetChild(0).gameObject);
+        }
+        else if (itemPlacerTransform.childCount == 0)
+        {
+            Debug.Log("NO Hay un objeto instanciado");
+        }
 
+        Instantiate(itemToEquip, itemPlacerTransform.transform.position, itemPlacerTransform.transform.rotation, itemPlacerTransform);
+    }
+    
     public void SwitchHotbarInventory(Item item)
     {
         foreach (Item i in inventoryItemList)
@@ -85,13 +101,21 @@ public class Inventory : MonoBehaviour
         //Debug.Log("Item Removed");
     }
 
-    public bool ContainsItem(Item item, int amount)
+    public bool ContainsItem(string itemName, int amount)
     {
         int itemCounter = 0;
 
         foreach (Item i in inventoryItemList)
         {
-            if (i == item)
+            if (i.name == itemName)
+            {
+                itemCounter++;
+            }
+        }
+        
+        foreach (Item i in hotbarItemList)
+        {
+            if (i.name == itemName)
             {
                 itemCounter++;
             }
@@ -107,11 +131,32 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void RemoveItems(Item item, int amount)
+    public void RemoveItems(String itemName, int amount)
     {
         for (int i = 0; i < amount; i++)
         {
-            RemoveItem(item);
+            RemoveItemType(itemName);
+        }
+    }
+
+    public void RemoveItemType(string itemName)
+    {
+        foreach (Item i in inventoryItemList)
+        {
+            if (i.name == itemName)
+            {
+                inventoryItemList.Remove(i);
+                return;
+            }
+        }
+        
+        foreach (Item i in hotbarItemList)
+        {
+            if (i.name == itemName)
+            {
+                hotbarItemList.Remove(i);
+                return;
+            }
         }
     }
 }

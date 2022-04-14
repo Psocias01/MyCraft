@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Hand;
 
     public Animator _anim;
+
+    public bool puedeTalar;
     
     // INVENTORY REFERENCIAS
     [SerializeField] private InventoryUI InventoryUI;
