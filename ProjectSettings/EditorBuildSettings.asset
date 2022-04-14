@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/LevelDesign_Nil.unity
-    guid: c2f8346d3052c3a41a113e102548eee6
+    path: Assets/Scenes/Inicio.unity
+    guid: 032dac542fd7e61488f845cdbf18f045
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 55483b88fabf5a744860aaf53bcbfed7
+  - enabled: 1
+    path: Assets/Scenes/LVL_Design_DEFINITIVO.unity
+    guid: f126bf30fea46f24faa7dd46bc6e9453
   m_configObjects: {}
