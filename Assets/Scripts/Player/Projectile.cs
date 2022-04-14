@@ -1,18 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool collided;
+    public GameObject poderPrefab;
+    private void OnCollisionEnter(Collision co)
     {
-        
-    }
+        if (co.gameObject.tag != "Magia" && co.gameObject.tag != "Player" && !collided)
+        {
+            collided = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            var impact = Instantiate(poderPrefab, co.contacts[0].point, Quaternion.identity) as GameObject;
+            
+            Destroy(impact, 6);
+            
+            Destroy(gameObject);
+        }
     }
 }

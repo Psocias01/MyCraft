@@ -7,27 +7,29 @@ public class FPSShooter : MonoBehaviour
 {
     public Camera Camera;
     public GameObject projectile;
-    public Transform LHFirePoint, RHFirePoint;
+    public Transform LHFirePoint;
     
     private Vector3 destination;
-    private bool leftHand;
+    [SerializeField] private bool leftHand;
     public float projectileSpeed = 30;
+    public float fireRate = 4;
+
+    private float timeToFire;
 
     public bool canFire;
     
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (canFire)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButton("Fire1") && Time.time >= timeToFire)
             {
+                timeToFire = Time.time + 1 / fireRate;
                 ShootProjectile();
             }
         }
@@ -52,11 +54,6 @@ public class FPSShooter : MonoBehaviour
             leftHand = false;
             InstantiateProjectile(LHFirePoint);
         }
-        else
-        {
-            leftHand = true;
-            InstantiateProjectile(RHFirePoint);
-        }
         
     }
     
@@ -65,6 +62,7 @@ public class FPSShooter : MonoBehaviour
         var projectileObj = Instantiate(projectile, firePoint.position, Quaternion.identity) as GameObject;
         
         projectileObj.GetComponent<Rigidbody>().velocity = (destination - firePoint.position).normalized * projectileSpeed;
+        leftHand = true;
     }
 
 }
