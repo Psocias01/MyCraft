@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7361910819694739047
+--- !u!1 &6008793013285042680
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7361910819694739040}
-  - component: {fileID: 7361910819694739041}
-  - component: {fileID: 7361910819694739046}
+  - component: {fileID: 6008793013285042683}
+  - component: {fileID: 6008793013285042682}
+  - component: {fileID: 6008793013285042681}
   m_Layer: 0
-  m_Name: vfxgraph_IceAttack
+  m_Name: FireTornado_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7361910819694739040
+--- !u!4 &6008793013285042683
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7361910819694739047}
+  m_GameObject: {fileID: 6008793013285042680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -271.47, y: 24.49, z: -207.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!2083052967 &7361910819694739041
+--- !u!2083052967 &6008793013285042682
 VisualEffect:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7361910819694739047}
+  m_GameObject: {fileID: 6008793013285042680}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 3fe689a069fad5c499de7214c40b9a3a, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 3a927e2106741fe428560b762661d60e, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -50,41 +50,26 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: -4
-        m_Name: Ground_LVL
+      - m_Value: 0.75
+        m_Name: TornadoLayer1Dissolve
         m_Overridden: 1
-      - m_Value: 1
-        m_Name: Radius
-        m_Overridden: 1
-      - m_Value: 5
-        m_Name: SpikesCount
-        m_Overridden: 1
-      - m_Value: 5
-        m_Name: GroundIceCount
-        m_Overridden: 1
-      - m_Value: 7
-        m_Name: GroundSize
-        m_Overridden: 1
-      - m_Value: 0.3
-        m_Name: SpikesSize
-        m_Overridden: 1
-      - m_Value: 0.4
-        m_Name: GroundIceSize
+      - m_Value: 0.75
+        m_Name: TornadoCoreDissolve
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0, y: 11, z: 0}
+        m_Name: TopRingPosition
+        m_Overridden: 1
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 2.3843138, y: 2.9490197, z: 3.9686275, w: 1}
-        m_Name: GroundIceColor
+      - m_Value: {x: 33.89676, y: 6.5663877, z: 1.9521693, w: 1}
+        m_Name: TornadoLayer1Color
         m_Overridden: 1
-      - m_Value: {x: 4.0350685, y: 5.131301, z: 5.737727, w: 1}
-        m_Name: GroundColor
-        m_Overridden: 1
-      - m_Value: {x: 0.36483917, y: 0.6130592, z: 0.8113208, w: 0}
-        m_Name: SpikesColor
+      - m_Value: {x: 11.796079, y: 3.2627451, z: 1.5058824, w: 0}
+        m_Name: TornadoCoreColor
         m_Overridden: 1
     m_Uint:
       m_Array: []
@@ -100,16 +85,16 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
---- !u!73398921 &7361910819694739046
+--- !u!73398921 &6008793013285042681
 VFXRenderer:
   serializedVersion: 1
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7361910819694739047}
+  m_GameObject: {fileID: 6008793013285042680}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
