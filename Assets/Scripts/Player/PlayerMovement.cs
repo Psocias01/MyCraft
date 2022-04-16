@@ -97,11 +97,34 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #endregion
+
+    #region Food
+
+    public int foodAmount = 100;
+    public bool hasSpent;
+    public float timeToSpendFood = 15f;
+    
+    
+    IEnumerator ConsumeFood()
+    {
+        hasSpent = true;
+        yield return new WaitForSeconds(timeToSpendFood);
+        foodAmount -= 10;
+        hasSpent = false;
+    }
+
+    #endregion
     
     
     // Update is called once per frame
     void Update()
     {
+        if (!hasSpent)
+        {
+            StartCoroutine(ConsumeFood());
+        }
+        
+        
         if (!isDead)
         {
             // Ejecutar la accion deseada cuando el item deseado está activo.
