@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity;
 
     public Transform playerBody;
 
@@ -45,5 +46,10 @@ public class MouseLook : MonoBehaviour
                 
             }
         }
+    }
+
+    public void MouseSensibilityOptions()
+    {
+        mouseSensitivity = GameManager.instance.mouseSensibilitySlder.value;
     }
 }

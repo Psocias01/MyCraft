@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
+    
+    public Slider mouseSensibilitySlder;
     
     public List<Item> itemList = new List<Item>();
     public List<Item> craftingRecipes = new List<Item>();
