@@ -50,6 +50,14 @@ public class GameManager : MonoBehaviour
     public void OnStateItemUse(StatItemType itemType, int amount)
     {
         Debug.Log("Consuming " + itemType + " Add amount: " + amount);
+        if (itemType == StatItemType.FoodItem)
+        {
+            
+        }
+        else if (itemType == StatItemType.HealthItem)
+        {
+            Player.Rehab(amount);
+        }
     }
 
     public void DisplayItemInfo(string itemName, String itemDescription, Vector2 buttonPos)
