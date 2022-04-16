@@ -1,0 +1,605 @@
+fileFormatVersion: 2
+guid: 399975b5a4f4c5f44986c7154517d70f
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Golem_Rigging_OK:R_Thumb_Mid_Jnt' has translation
+      animation that will be discarded.\n\t'Golem_Rigging_OK:L_MiddleLeg_Jnt' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Golem_Rigging_OK:R_MiddleLeg_Jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 40
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Golem_Rigging_OK:Spine_Root_Jnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_UpperLeg_Jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_UpperLeg_Jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_LowerLeg_Jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_LowerLeg_Jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Foot_Jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Foot_Jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:Spine_1_Jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:Spine_2_Jnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:Head_Mid_Jnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Shoulder_Jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Shoulder_Jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Elbow_Jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Elbow_Jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Wrist_Jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Wrist_Jnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Thumb_Base_Jnt
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Thumb_Mid_Jnt
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Middle_Base_Jnt
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Middle_Mid_Jnt
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Middle_Tip_Jnt
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Thumb_Base_Jnt
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Thumb_Mid_Jnt
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Middle_Base_Jnt
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Middle_Mid_Jnt
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Middle_Tip_Jnt
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:Chest_Jnt
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Toe_Jnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Toe_Jnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:L_Thumb_Top_Jnt
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Golem_Rigging_OK:R_Thumb_Top_Jnt
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Golem_Enemy(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Golem_Geo
+      parentName: Golem_Enemy(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:polySurface2
+      parentName: Golem_Rigging_OK:Golem_Geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Rig_GRP
+      parentName: Golem_Enemy(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Skeleton_GRP
+      parentName: Golem_Rigging_OK:Rig_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Base_Skeleton
+      parentName: Golem_Rigging_OK:Skeleton_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Spine_Root_Jnt
+      parentName: Golem_Rigging_OK:Base_Skeleton
+      position: {x: 0, y: 2.736569, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Spine_1_Jnt
+      parentName: Golem_Rigging_OK:Spine_Root_Jnt
+      position: {x: -0, y: 0.8, z: 0}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Spine_2_Jnt
+      parentName: Golem_Rigging_OK:Spine_1_Jnt
+      position: {x: -1.2, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Chest_Jnt
+      parentName: Golem_Rigging_OK:Spine_2_Jnt
+      position: {x: -0.8, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: 0.44948742, w: 0.8932867}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Head_Mid_Jnt
+      parentName: Golem_Rigging_OK:Chest_Jnt
+      position: {x: -0.20847453, y: 1.1192849, z: 0}
+      rotation: {x: 0, y: 0, z: -0.56119376, w: 0.82768446}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Head_Top_Jnt
+      parentName: Golem_Rigging_OK:Head_Mid_Jnt
+      position: {x: -0.5174641, y: 6.476345e-16, z: 0}
+      rotation: {x: 0, y: 0, z: 0.3560183, w: 0.934479}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:Head_End_Jnt
+      parentName: Golem_Rigging_OK:Head_Top_Jnt
+      position: {x: -0.8944272, y: -5.4091577e-16, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Shoulder_Jnt
+      parentName: Golem_Rigging_OK:Chest_Jnt
+      position: {x: 0.30466324, y: 5.2521668e-17, z: 1.8411368}
+      rotation: {x: -0.6964748, y: -0.000000029802326, z: 0.7175813, w: 0.000000020023437}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Elbow_Jnt
+      parentName: Golem_Rigging_OK:L_Shoulder_Jnt
+      position: {x: -1.3479776, y: -1.3909947e-16, z: 0}
+      rotation: {x: -0.011644696, y: -0.013555049, z: 0.021786107, w: 0.9996029}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Wrist_Jnt
+      parentName: Golem_Rigging_OK:L_Elbow_Jnt
+      position: {x: -1.7614346, y: -2.6645354e-16, z: -2.4868997e-15}
+      rotation: {x: 1, y: -3.447763e-17, z: -2.0816682e-17, w: -2.503723e-15}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Middle_Base_Jnt
+      parentName: Golem_Rigging_OK:L_Wrist_Jnt
+      position: {x: -0.7859999, y: -0.09031891, z: -0.07189404}
+      rotation: {x: -0.62250906, y: -0.03452834, z: 0.06299351, w: 0.77930874}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Middle_Mid_Jnt
+      parentName: Golem_Rigging_OK:L_Middle_Base_Jnt
+      position: {x: -0.29248717, y: 1.0658141e-15, z: 8.881784e-17}
+      rotation: {x: 0.046043813, y: -0.037772797, z: 0.015537344, w: 0.99810416}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Middle_Tip_Jnt
+      parentName: Golem_Rigging_OK:L_Middle_Mid_Jnt
+      position: {x: -0.25726327, y: 5.3290707e-16, z: -8.881784e-17}
+      rotation: {x: -0.02144736, y: 0.001752145, z: 0.027525311, w: 0.99938947}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Middle_Top_Jnt
+      parentName: Golem_Rigging_OK:L_Middle_Tip_Jnt
+      position: {x: -0.3472, y: -7.1054275e-16, z: -1.7763569e-16}
+      rotation: {x: -1.217559e-16, y: 8.7711956e-17, z: 6.102703e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Thumb_Base_Jnt
+      parentName: Golem_Rigging_OK:L_Wrist_Jnt
+      position: {x: -0.4398279, y: 0.51730686, z: 0.21964264}
+      rotation: {x: -0.408951, y: 0.1779149, z: -0.30243134, w: 0.84240174}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Thumb_Mid_Jnt
+      parentName: Golem_Rigging_OK:L_Thumb_Base_Jnt
+      position: {x: -0.36823833, y: 0, z: -3.5527137e-16}
+      rotation: {x: 0.13912444, y: -0.013872117, z: 0.030198619, w: 0.9897172}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Thumb_Top_Jnt
+      parentName: Golem_Rigging_OK:L_Thumb_Mid_Jnt
+      position: {x: -0.33083495, y: -7.1054275e-16, z: 8.881784e-17}
+      rotation: {x: -7.535205e-17, y: -1.528725e-17, z: 1.1254019e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Shoulder_Jnt
+      parentName: Golem_Rigging_OK:Chest_Jnt
+      position: {x: 0.30468, y: 0, z: -1.841136}
+      rotation: {x: 0.6964748, y: -0.000000026077032, z: 0.7175813, w: -0.000000029802322}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Elbow_Jnt
+      parentName: Golem_Rigging_OK:R_Shoulder_Jnt
+      position: {x: -1.3479639, y: 3.465586e-16, z: -1.4210855e-15}
+      rotation: {x: 0.01164496, y: 0.01355505, z: 0.02178581, w: 0.999603}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Wrist_Jnt
+      parentName: Golem_Rigging_OK:R_Elbow_Jnt
+      position: {x: -1.7614319, y: 6.2172494e-16, z: 0}
+      rotation: {x: 1, y: 0, z: -0, w: 6.123234e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Middle_Base_Jnt
+      parentName: Golem_Rigging_OK:R_Wrist_Jnt
+      position: {x: -0.7860024, y: -0.09031932, z: 0.07188981}
+      rotation: {x: 0.6225095, y: 0.034526326, z: 0.06299544, w: 0.7793084}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Middle_Mid_Jnt
+      parentName: Golem_Rigging_OK:R_Middle_Base_Jnt
+      position: {x: -0.29248518, y: 8.881784e-16, z: 1.7763569e-16}
+      rotation: {x: -0.046043325, y: 0.037773646, z: 0.015534423, w: 0.9981041}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Middle_Tip_Jnt
+      parentName: Golem_Rigging_OK:R_Middle_Mid_Jnt
+      position: {x: -0.25726527, y: -8.881784e-16, z: -1.7763569e-16}
+      rotation: {x: 0.07492377, y: -0.012445248, z: 0.02243669, w: 0.99685913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Middle_Top_Jnt
+      parentName: Golem_Rigging_OK:R_Middle_Tip_Jnt
+      position: {x: -0.34716275, y: 4.440892e-16, z: -4.440892e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Thumb_Base_Jnt
+      parentName: Golem_Rigging_OK:R_Wrist_Jnt
+      position: {x: -0.43982872, y: 0.5173054, z: -0.21964607}
+      rotation: {x: 0.2513845, y: -0.12420772, z: -0.3281344, w: 0.9020567}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Thumb_Mid_Jnt
+      parentName: Golem_Rigging_OK:R_Thumb_Base_Jnt
+      position: {x: -0.36823604, y: 2.4868997e-15, z: 4.440892e-16}
+      rotation: {x: 0.0815525, y: 0.0009309574, z: 0.029964183, w: 0.99621814}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Thumb_Top_Jnt
+      parentName: Golem_Rigging_OK:R_Thumb_Mid_Jnt
+      position: {x: -0.33083513, y: -1.2434499e-15, z: -3.1086247e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_UpperLeg_Jnt
+      parentName: Golem_Rigging_OK:Spine_Root_Jnt
+      position: {x: -0.8, y: -0.19763537, z: -0.1653186}
+      rotation: {x: 0.4444277, y: 0.5499855, z: 0.3916609, w: 0.58872896}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_MiddleLeg_Jnt
+      parentName: Golem_Rigging_OK:L_UpperLeg_Jnt
+      position: {x: -1.1629366, y: -8.881784e-17, z: 0}
+      rotation: {x: 0.000020031524, y: 0.021448521, z: 0.30027664, w: 0.95361096}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_LowerLeg_Jnt
+      parentName: Golem_Rigging_OK:L_MiddleLeg_Jnt
+      position: {x: -0.76944816, y: -4.662937e-16, z: 3.5527137e-16}
+      rotation: {x: -0.015315643, y: 0.005992698, z: -0.21777849, w: 0.97585964}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Foot_Jnt
+      parentName: Golem_Rigging_OK:L_LowerLeg_Jnt
+      position: {x: -0.41329864, y: 3.5527137e-16, z: 0}
+      rotation: {x: -0.04023544, y: -0.00851984, z: -0.5527809, w: 0.83231115}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:L_Toe_Jnt
+      parentName: Golem_Rigging_OK:L_Foot_Jnt
+      position: {x: -0.5730325, y: 2.6645354e-16, z: 3.5527137e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_UpperLeg_Jnt
+      parentName: Golem_Rigging_OK:Spine_Root_Jnt
+      position: {x: 0.8, y: -0.19763601, z: -0.16531841}
+      rotation: {x: 0.39166108, y: 0.5887288, z: 0.44442773, w: 0.54998547}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_MiddleLeg_Jnt
+      parentName: Golem_Rigging_OK:R_UpperLeg_Jnt
+      position: {x: -1.1629375, y: 2.6645354e-16, z: 3.5527137e-16}
+      rotation: {x: -0.000020043448, y: -0.021447282, z: 0.30027694, w: 0.95361096}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_LowerLeg_Jnt
+      parentName: Golem_Rigging_OK:R_MiddleLeg_Jnt
+      position: {x: -0.7694467, y: -3.1086247e-16, z: -8.881784e-16}
+      rotation: {x: 0.015315516, y: -0.0059938384, z: -0.21777856, w: 0.97585964}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Foot_Jnt
+      parentName: Golem_Rigging_OK:R_LowerLeg_Jnt
+      position: {x: -0.4132987, y: 4.440892e-17, z: 8.881784e-16}
+      rotation: {x: 0.04023459, y: 0.0085189985, z: -0.5527809, w: 0.8323112}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Golem_Rigging_OK:R_Toe_Jnt
+      parentName: Golem_Rigging_OK:R_Foot_Jnt
+      position: {x: -0.57303095, y: 0, z: -1.7763569e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 40
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 4bd5660433d435147b0a818a5d305332, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
