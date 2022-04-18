@@ -30,18 +30,33 @@ public class Inventory : MonoBehaviour
     
     public Transform itemPlacerTransform;
 
+    public void UnequipItem()
+    {
+        GameManager.instance.Player._anim.SetBool("Item", false);
+        if (itemPlacerTransform.childCount > 0)
+        {
+            Debug.Log("Desequipando Objeto");
+            Destroy(itemPlacerTransform.GetChild(0).gameObject);
+        }
+        else
+        {
+            Debug.Log("No hay objeto equipado");
+            return;
+        }
+    }
+    
     public void PlaceItem(GameObject itemToEquip)
     {
         if (itemPlacerTransform.childCount > 0)
         {
-            Debug.Log("Hay un objeto instanciado");
+            Debug.Log("Hay un objeto equipado");
             Destroy(itemPlacerTransform.GetChild(0).gameObject);
         }
         else if (itemPlacerTransform.childCount == 0)
         {
-            Debug.Log("NO Hay un objeto instanciado");
+            Debug.Log("NO Hay un objeto equipado");
         }
-
+        GameManager.instance.Player._anim.SetBool("Item", true);
         Instantiate(itemToEquip, itemPlacerTransform.transform.position, itemPlacerTransform.transform.rotation, itemPlacerTransform);
     }
     

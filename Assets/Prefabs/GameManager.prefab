@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18583d72758c39e409b83fd9254d0fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseSensibilitySlder: {fileID: 0}
   itemList:
   - {fileID: 11400000, guid: 860401e4a70a28a4e9d2170999666810, type: 2}
   - {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}
@@ -52,4 +53,12 @@ MonoBehaviour:
   craftingRecipes:
   - {fileID: 11400000, guid: 6848fa989e844a74d82b1054f191da8b, type: 2}
   - {fileID: 11400000, guid: aa021de70b8583742896d286c264959a, type: 2}
+  - {fileID: 11400000, guid: 77bd4404d77e6af48a76f8af29cd0324, type: 2}
   Player: {fileID: 0}
+  canvas: {fileID: 0}
+  itemInfoPrefab: {fileID: 3457193191123757877, guid: 38cbdde6e71325140b5cf3a79e895296, type: 3}
+  mainCanvas: {fileID: 0}
+  HotbarTransform: {fileID: 0}
+  inventoryTransform: {fileID: 0}
+  moveX: 0
+  moveY: 280

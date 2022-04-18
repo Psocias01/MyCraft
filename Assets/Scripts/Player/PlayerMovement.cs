@@ -22,9 +22,12 @@ public class PlayerMovement : MonoBehaviour
     // INVENTORY REFERENCIAS
     [SerializeField] private InventoryUI InventoryUI;
 
-    public float speed = 12f;
+    public float speed = 10f;
+    public float normalSpeed = 10f;
+    public float sprintSpeed = 18f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    public float playerMovement;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -37,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
     
     private Vector3 velocity;
     private bool isGrounded;
+    private float playerIsMoving;
+    private bool isRunning;
 
     [SerializeField] private HealthBar mHealthBar;
     
@@ -133,6 +138,26 @@ public class PlayerMovement : MonoBehaviour
                 // TO DO: Definir que acción invidual hará cada item.
                 _anim.SetTrigger("Attack");
             }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Inventory.instance.UnequipItem();
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = sprintSpeed;
+                
+                isRunning = true;
+                _anim.SetBool("isRunning", isRunning);
+            }
+            else
+            {
+                speed = normalSpeed;
+                
+                isRunning = false;
+                _anim.SetBool("isRunning", isRunning);
+            }
             
             
             // Regulamos con uns CheckSphere cuando el player está Grounded
@@ -145,6 +170,18 @@ public class PlayerMovement : MonoBehaviour
             
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
+
+            playerIsMoving = (x + z);
+            if (playerIsMoving != 0)
+            {
+                playerMovement = 1;
+                _anim.SetFloat("PlayerMovement", playerMovement);
+            }
+            else if (playerIsMoving == 0)
+            {
+                playerMovement = 0;
+                _anim.SetFloat("PlayerMovement", playerMovement);
+            }
 
             Vector3 move = transform.right * x + transform.forward * z;
 
