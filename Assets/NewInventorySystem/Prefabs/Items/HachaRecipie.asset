@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HachaRecipie
   m_EditorClassIdentifier: 
   name: Hacha
-  icon: {fileID: 21300000, guid: 56bb060ffcd542e41bfe8819f639e3e3, type: 3}
+  icon: {fileID: 21300000, guid: a323b9e53a917f348b1a1af920a5beb1, type: 3}
   itemDescription: Usado para talar o atacar
   result: {fileID: 11400000, guid: ec8ccf315b5c0cb4baaa5915285098fd, type: 2}
   ingredients:

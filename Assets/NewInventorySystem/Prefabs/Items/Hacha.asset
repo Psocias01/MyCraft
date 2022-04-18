@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Hacha
   m_EditorClassIdentifier: 
   name: Hacha
-  icon: {fileID: 21300000, guid: 56bb060ffcd542e41bfe8819f639e3e3, type: 3}
+  icon: {fileID: 21300000, guid: a323b9e53a917f348b1a1af920a5beb1, type: 3}
   itemDescription: Usado para talar o atacar
   itemToEquip: {fileID: 8748052979351598547, guid: f6e0568e17e5e474e8f3ea1dc2e5b3ed, type: 3}
