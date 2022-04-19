@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb61d06267a5acc4caa8698f75387047, type: 3}
   m_Name: HealthItem
   m_EditorClassIdentifier: 
-  name: HealthPack
+  name: Botiquin
   icon: {fileID: 21300000, guid: 2e44e263933672b459f7e36c6134c6c1, type: 3}
   itemDescription: + 25 de vida
   itemType: 0

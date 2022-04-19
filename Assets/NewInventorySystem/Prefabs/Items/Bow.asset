@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4261c01a74cac47bc5dec23990a3d2, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
-  name: Bow
+  name: Arco
   icon: {fileID: 21300000, guid: 0ad2f1f2ee18ea641b2c79454fe91dfe, type: 3}
+  itemDescription: Used for crafting

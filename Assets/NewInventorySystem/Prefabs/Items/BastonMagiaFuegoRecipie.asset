@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9f203e1cb039447a36f0d2ca36be4e, type: 3}
+  m_Name: BastonMagiaFuegoRecipie
+  m_EditorClassIdentifier: 
+  name: Baston de Fuego Recipie
+  icon: {fileID: 0}
+  itemDescription: Used for crafting
+  result: {fileID: 11400000, guid: 47b2f760f69cbe643b784fa25cb323dc, type: 2}
+  ingredients:
+  - item: {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}
+    amount: 2
+  - item: {fileID: 11400000, guid: e1a789e1d1afde74f979901f790a1103, type: 2}
+    amount: 1

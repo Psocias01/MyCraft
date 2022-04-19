@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4261c01a74cac47bc5dec23990a3d2, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
-  name: Wood
+  name: Madera
   icon: {fileID: 21300000, guid: 395455a913d8d2741bead0d40da9dd76, type: 3}
-  itemDescription: Used for crafting
+  itemDescription: "Material de construcci\xF3n"

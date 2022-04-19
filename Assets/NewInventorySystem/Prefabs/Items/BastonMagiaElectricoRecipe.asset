@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9f203e1cb039447a36f0d2ca36be4e, type: 3}
+  m_Name: BastonMagiaElectricoRecipe
+  m_EditorClassIdentifier: 
+  name: Baston Electrico Recipie
+  icon: {fileID: 0}
+  itemDescription: Used for crafting
+  result: {fileID: 11400000, guid: 08997e80a9474fc4e8237adc3cc4fa4c, type: 2}
+  ingredients:
+  - item: {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}
+    amount: 2
+  - item: {fileID: 11400000, guid: 6cf13018b239b9c43ab68a4d836d1891, type: 2}
+    amount: 1
