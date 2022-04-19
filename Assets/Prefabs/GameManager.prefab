@@ -50,6 +50,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}
   - {fileID: 11400000, guid: 4c0623984c6b4f84291499191dffbe02, type: 2}
   - {fileID: 11400000, guid: e23bdc58726a9fe4f8159fdc83265a42, type: 2}
+  - {fileID: 11400000, guid: 08997e80a9474fc4e8237adc3cc4fa4c, type: 2}
   craftingRecipes:
   - {fileID: 11400000, guid: 6848fa989e844a74d82b1054f191da8b, type: 2}
   - {fileID: 11400000, guid: aa021de70b8583742896d286c264959a, type: 2}

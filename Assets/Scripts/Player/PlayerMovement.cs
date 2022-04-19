@@ -136,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 // TO DO: Definir que acción invidual hará cada item.
-                _anim.SetTrigger("Attack");
+                _anim.SetTrigger("Talar");
             }
 
             if (Input.GetKeyDown(KeyCode.R))

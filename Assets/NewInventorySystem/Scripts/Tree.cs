@@ -34,6 +34,7 @@ public class Tree : MonoBehaviour
         hasChoped = false;
     }
 
+    
 
     // Update is called once per frame
     void Update()

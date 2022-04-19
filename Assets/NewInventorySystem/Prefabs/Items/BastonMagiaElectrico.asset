@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Baston de Gema Electrica
   icon: {fileID: 21300000, guid: 0b891b1a582052c418df58e83c37ac12, type: 3}
   itemDescription: Poderoso artefacto para controlar la Electricidad
-  itemToEquip: {fileID: 7465346849155102292, guid: 8bbe55f9dce67fc41a471f5f64f08e73, type: 3}
+  itemToEquip: {fileID: 421378284736253698, guid: 5919265b7c1ae344e8a975570fb901f5, type: 3}

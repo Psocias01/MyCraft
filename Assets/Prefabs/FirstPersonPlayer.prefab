@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7b839a81e34c343958d2d59b071bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 1000
+  mouseSensitivity: 800
   playerBody: {fileID: 121707546739587713}
 --- !u!114 &1807486734
 MonoBehaviour:
@@ -324,10 +324,14 @@ MonoBehaviour:
   Controller: {fileID: 121707546739587714}
   Hand: {fileID: 5046780754262876428}
   _anim: {fileID: 5866666021924122560}
+  puedeTalar: 0
   InventoryUI: {fileID: 0}
   speed: 10
-  gravity: -19.62
+  normalSpeed: 10
+  sprintSpeed: 18
+  gravity: -39.24
   jumpHeight: 3
+  playerMovement: 0
   groundCheck: {fileID: 121707545655736288}
   groundDistance: 0.4
   groundMask:
@@ -335,6 +339,9 @@ MonoBehaviour:
     m_Bits: 64
   mHealthBar: {fileID: 0}
   Health: 100
+  foodAmount: 100
+  hasSpent: 0
+  timeToSpendFood: 15
 --- !u!65 &1081235952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -363,8 +370,9 @@ MonoBehaviour:
   Camera: {fileID: 121707546634649772}
   projectile: {fileID: 0}
   LHFirePoint: {fileID: 0}
-  RHFirePoint: {fileID: 0}
+  leftHand: 0
   projectileSpeed: 30
+  fireRate: 4
   canFire: 0
 --- !u!54 &1081235953
 Rigidbody:
@@ -410,6 +418,7 @@ MonoBehaviour:
   inventoryItemList: []
   hotbarItemList: []
   hotbarController: {fileID: 0}
+  itemPlacerTransform: {fileID: 4595432210043444147}
 --- !u!1 &1498819856887497288
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5046780754262876428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.256, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -571,7 +580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d320429b2087e094bb665f78458d28f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.643
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d320429b2087e094bb665f78458d28f9, type: 3}
       propertyPath: m_LocalPosition.z

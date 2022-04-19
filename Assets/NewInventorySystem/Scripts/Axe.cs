@@ -1,18 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Axe : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private BoxCollider collider;
+
+    private void Start()
     {
-        
+        collider = GetComponent<BoxCollider>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ActivarColliderHacha()
     {
-        
+        collider.enabled = true;
+    }
+    
+    public void DesctivarColliderHacha()
+    {
+        collider.enabled = false;
     }
 }
