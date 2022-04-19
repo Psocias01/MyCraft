@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BastonMagiaFuegoRecipie
   m_EditorClassIdentifier: 
   name: Baston de Fuego Recipie
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 6a6b87d515688ef4c9742d3e252fb6b1, type: 3}
   itemDescription: Used for crafting
   result: {fileID: 11400000, guid: 47b2f760f69cbe643b784fa25cb323dc, type: 2}
   ingredients:

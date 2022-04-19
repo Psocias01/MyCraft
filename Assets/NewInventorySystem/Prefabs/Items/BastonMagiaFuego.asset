@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BastonMagiaFuego
   m_EditorClassIdentifier: 
   name: Baston de Magia de Fuego
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 6a6b87d515688ef4c9742d3e252fb6b1, type: 3}
   itemDescription: Poderoso artefacto para controlar el Fuego
-  itemToEquip: {fileID: 0}
+  itemToEquip: {fileID: 3962024521499824424, guid: 34e862a84fdd1cd4994502ad9ed74484, type: 3}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GemaElectrica
   m_EditorClassIdentifier: 
   name: Gema Electrica
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 06becf6e0285b10469cf66ac0d1d9230, type: 3}
   itemDescription: Poderoso objeto que contiene el poder del rayo

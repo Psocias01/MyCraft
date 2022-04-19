@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BastonMagiaHieloRecipie
   m_EditorClassIdentifier: 
   name: Baston de Hielo Recipie
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c899feef3eb44294ba6a6556653768d1, type: 3}
   itemDescription: Used for crafting
   result: {fileID: 11400000, guid: d44092416d281524f938f55ace6c7a29, type: 2}
   ingredients:
