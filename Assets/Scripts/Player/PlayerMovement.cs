@@ -33,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    public int MagiaDeFuego;
+    public int MagiaDeRayo;
+    public int MagiaDeHielo;
+
     #endregion
    
 
