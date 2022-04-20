@@ -9,6 +9,8 @@ public class FPSShooter : MonoBehaviour
     public GameObject projectile;
     public Transform LHFirePoint;
     
+    
+    
     private Vector3 destination;
     [SerializeField] private bool leftHand;
     public float projectileSpeed = 30;
@@ -30,13 +32,15 @@ public class FPSShooter : MonoBehaviour
             if (Input.GetButton("Fire1") && Time.time >= timeToFire)
             {
                 timeToFire = Time.time + 1 / fireRate;
-                ShootProjectile();
+                StartCoroutine(DispararMagia());
             }
         }
     }
 
-    void ShootProjectile()
+    IEnumerator DispararMagia()
     {
+        yield return new WaitForSeconds(0.67f);
+        
         Ray ray = Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
 
@@ -54,6 +58,10 @@ public class FPSShooter : MonoBehaviour
             leftHand = false;
             InstantiateProjectile(LHFirePoint);
         }
+    }
+
+    void ShootProjectile()
+    {
         
     }
     

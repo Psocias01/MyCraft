@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7361910819694739040}
   - component: {fileID: 7361910819694739041}
   - component: {fileID: 7361910819694739046}
+  - component: {fileID: 3654502652858608612}
   m_Layer: 0
   m_Name: IceAttack_Prefab
-  m_TagString: Untagged
+  m_TagString: MagiaHielo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,3 +141,16 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3654502652858608612
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361910819694739047}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 2, z: 8}
+  m_Center: {x: 0, y: 1, z: 2}

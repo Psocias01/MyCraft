@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Magia
+  - MagiaHielo
+  - MagiaElectrica
+  - MagiaFuego
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - PostProcessing
   - 
   - 
   - 

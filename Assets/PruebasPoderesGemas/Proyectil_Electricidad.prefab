@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1798219269981190880}
   m_Layer: 0
   m_Name: Proyectil_Electricidad
-  m_TagString: Untagged
+  m_TagString: MagiaElectrica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

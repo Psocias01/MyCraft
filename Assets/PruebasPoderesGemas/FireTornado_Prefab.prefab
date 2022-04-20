@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6008793013285042683}
   - component: {fileID: 6008793013285042682}
   - component: {fileID: 6008793013285042681}
+  - component: {fileID: 1216094656258341273}
   m_Layer: 0
   m_Name: FireTornado_Prefab
-  m_TagString: Untagged
+  m_TagString: MagiaFuego
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,3 +126,17 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &1216094656258341273
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6008793013285042680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 22
+  m_Direction: 1
+  m_Center: {x: 0, y: 6, z: 0}
