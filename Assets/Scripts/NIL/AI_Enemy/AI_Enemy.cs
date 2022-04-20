@@ -15,7 +15,10 @@ public class AI_Enemy : MonoBehaviour
    public int enemy_MaxHealth = 100;
 
    private bool isAlive = true;
-   
+   private bool TotallyDead = false;
+
+
+   private Vector3 AttackPos;
    
    private NavMeshAgent _navMeshAgent;
    private Animator _animator;
@@ -24,6 +27,7 @@ public class AI_Enemy : MonoBehaviour
    //Patrolling
    [SerializeField] private Transform[] waypoints;
    [SerializeField] private int currentWaypointIndex;
+   [SerializeField] private int tiempoEntreWaypoints;
    
    //Attacking
 
@@ -68,9 +72,13 @@ public class AI_Enemy : MonoBehaviour
            AttackPlayer();
        }
 
-       if (!isAlive)
+       if (!isAlive && !TotallyDead)
        {
-           gameObject.SetActive(false);
+           StartCoroutine(Morir());
+       }
+       if (enemy_Health <= 0)
+       {
+           isAlive = false;
        }
    }
 
@@ -82,8 +90,7 @@ public class AI_Enemy : MonoBehaviour
        
        if (enemy_Health <= 0)
        {
-           // TO DO: Activar shader de muerte
-           gameObject.SetActive(false);
+           isAlive = false;
        }
    }
    
@@ -100,6 +107,7 @@ public class AI_Enemy : MonoBehaviour
        {
            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
            _navMeshAgent.SetDestination(waypoints[currentWaypointIndex].position);
+           //StartCoroutine(WaitForWaypoint());
        }
    }
 
@@ -117,6 +125,7 @@ public class AI_Enemy : MonoBehaviour
    private void AttackPlayer()
    {
        _navMeshAgent.SetDestination(player.position);
+       _navMeshAgent.velocity = Vector3.zero;
 
        if (!alreadyAttacked)
        {
@@ -135,4 +144,24 @@ public class AI_Enemy : MonoBehaviour
    {
        alreadyAttacked = false;
    }
+
+   private IEnumerator WaitForWaypoint()
+   {
+       yield return new WaitForSeconds(tiempoEntreWaypoints);
+       
+       
+   }
+   
+   private IEnumerator Morir()
+   {
+       TotallyDead = true;
+       _animator.SetTrigger("isDead");
+       Debug.Log("EnemyMuriendo");
+       yield return new WaitForSeconds(3);
+       gameObject.SetActive(false);
+       // Activar shader de dissolve
+       
+   }
+   
+   
 }
