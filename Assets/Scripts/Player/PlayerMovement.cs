@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isRunning;
 
     [SerializeField] private HealthBar mHealthBar;
+    [SerializeField] private HungerBar mHungerBar;
     
     #endregion
     
@@ -120,6 +121,8 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(timeToSpendFood);
         foodAmount -= 10;
         hasSpent = false;
+        
+        mHungerBar.SetFood(foodAmount);
     }
 
     #endregion

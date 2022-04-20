@@ -39,10 +39,28 @@ public class MouseLook : MonoBehaviour
             if (cursorLocked)
             {
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
             else if (!cursorLocked)
             {
                 Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+                
+            }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            cursorLocked = !cursorLocked;
+            if (cursorLocked)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else if (!cursorLocked)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
                 
             }
         }

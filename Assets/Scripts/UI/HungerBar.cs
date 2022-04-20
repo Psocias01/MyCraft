@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class HungerBar : MonoBehaviour
 {
-    public Image ImgHealthBar;
-    public Text TxtHealth;
+    public Image ImgFoodBar;
+    public Text TxtFood;
     public int Min;
     public int Max;
     private int mCurrentValue;
     private float mCurrentPercentage;
 
-    public void SetHealth(int health)
+    public void SetFood(int food)
     {
-        if (health != mCurrentValue)
+        if (food != mCurrentValue)
         {
             if (Max - Min == 0)
             {
@@ -23,14 +23,14 @@ public class HealthBar : MonoBehaviour
             }
             else
             {
-                mCurrentValue = health;
+                mCurrentValue = food;
 
                 mCurrentPercentage = (float) mCurrentValue / (float) (Max - Min);
             }
 
-            TxtHealth.text = string.Format("{0} %", Mathf.RoundToInt(mCurrentPercentage * 100));
+            TxtFood.text = string.Format("{0} %", Mathf.RoundToInt(mCurrentPercentage * 100));
 
-            ImgHealthBar.fillAmount = mCurrentPercentage;
+            ImgFoodBar.fillAmount = mCurrentPercentage;
         }
     }
 
@@ -47,6 +47,6 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetHealth(100);
+        SetFood(100);
     }
 }

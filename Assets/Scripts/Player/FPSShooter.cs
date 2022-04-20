@@ -6,6 +6,7 @@ using UnityEngine;
 public class FPSShooter : MonoBehaviour
 {
     public Camera Camera;
+    private GameObject cameraObject;
     public GameObject projectile;
     public Transform LHFirePoint;
     
@@ -22,7 +23,8 @@ public class FPSShooter : MonoBehaviour
     
     void Start()
     {
-        
+        cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
+        Camera = cameraObject.GetComponent<Camera>();
     }
     
     void Update()

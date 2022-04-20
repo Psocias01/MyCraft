@@ -8,11 +8,15 @@ public class InventoryUI : MonoBehaviour
 
     private bool inventoryOpen = false;
 
+    private bool optionsPanelOpen = false;
+
     public bool InventoryOpen => inventoryOpen;
     public GameObject inventoryParent;
     public GameObject inventoryTab;
     public GameObject craftingTab;
     public GameObject messagePanel;
+
+    public GameObject optionsPanel;
 
     private List<ItemSlot> itemSlotList = new List<ItemSlot>();
     
@@ -43,6 +47,20 @@ public class InventoryUI : MonoBehaviour
             {
                 // Open
                 OpenInventory();
+            }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (optionsPanelOpen)
+            {
+                // Close
+                CloseOptions();
+            }
+            else
+            {
+                // Open
+                OpenOptions();
             }
         }
     }
@@ -104,11 +122,25 @@ public class InventoryUI : MonoBehaviour
         OnInventoryTabClicked();
     }
     
+    private void OpenOptions()
+    {
+        ChangeCursorState(false);
+        optionsPanelOpen = true;
+        optionsPanel.SetActive(true);
+    }
+    
     private void CloseInventory()
     {
         ChangeCursorState(true);
         inventoryOpen = false;
         inventoryParent.SetActive(false);
+    }
+    
+    private void CloseOptions()
+    {
+        ChangeCursorState(true);
+        optionsPanelOpen = false;
+        optionsPanel.SetActive(false);
     }
 
     public void OnCraftingTabClicked()
