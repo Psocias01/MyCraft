@@ -54,12 +54,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47b2f760f69cbe643b784fa25cb323dc, type: 2}
   - {fileID: 11400000, guid: d44092416d281524f938f55ace6c7a29, type: 2}
   craftingRecipes:
-  - {fileID: 11400000, guid: 6848fa989e844a74d82b1054f191da8b, type: 2}
-  - {fileID: 11400000, guid: aa021de70b8583742896d286c264959a, type: 2}
   - {fileID: 11400000, guid: 77bd4404d77e6af48a76f8af29cd0324, type: 2}
   - {fileID: 11400000, guid: 9c39719b5cb7829469d49a9c87f61eec, type: 2}
   - {fileID: 11400000, guid: f4c0e669ac60b0b4695874711b2d2dba, type: 2}
   - {fileID: 11400000, guid: f251f9d03a82ded44b1177492f306c87, type: 2}
+  - {fileID: 11400000, guid: f5cce957e8da0ee46b64dc1924130ed7, type: 2}
   Player: {fileID: 0}
   canvas: {fileID: 0}
   itemInfoPrefab: {fileID: 3457193191123757877, guid: 38cbdde6e71325140b5cf3a79e895296, type: 3}
