@@ -16,3 +16,8 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 8c2b448bd21b46049ab19f03495c92fd, type: 3}
   itemDescription: Espada para una defensa personal
   itemToEquip: {fileID: 2491377096141017540, guid: 7c5bfaa8ca53e5c418d1936664f366cf, type: 3}
+  Hacha: 0
+  Espada: 1
+  Pico: 0
+  Baston: 0
+  Farolillo: 0

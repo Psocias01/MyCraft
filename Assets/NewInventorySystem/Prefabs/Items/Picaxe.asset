@@ -16,3 +16,8 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: d4fa0c5e535d0c8429886e08c018812e, type: 3}
   itemDescription: Herramienta para recolectar piedra
   itemToEquip: {fileID: 5579425988410216863, guid: cd3fa62041325d749848683d34a59477, type: 3}
+  Hacha: 0
+  Espada: 0
+  Pico: 1
+  Baston: 0
+  Farolillo: 0

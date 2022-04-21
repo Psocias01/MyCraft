@@ -16,3 +16,8 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 0b891b1a582052c418df58e83c37ac12, type: 3}
   itemDescription: Poderoso artefacto para controlar la Electricidad
   itemToEquip: {fileID: 421378284736253698, guid: 5919265b7c1ae344e8a975570fb901f5, type: 3}
+  Hacha: 0
+  Espada: 0
+  Pico: 0
+  Baston: 1
+  Farolillo: 0

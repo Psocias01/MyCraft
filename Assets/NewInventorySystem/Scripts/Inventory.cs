@@ -61,6 +61,24 @@ public class Inventory : MonoBehaviour
             Debug.Log("NO Hay un objeto equipado");
         }
         GameManager.instance.Player._anim.SetBool("Item", true);
+        GameManager.instance.Player._anim.SetBool("Farol", false);
+        Instantiate(itemToEquip, itemPlacerTransform.transform.position, itemPlacerTransform.transform.rotation, itemPlacerTransform);
+        HandCollider.enabled = false;
+    }
+    
+    public void PlaceFarol(GameObject itemToEquip)
+    {
+        if (itemPlacerTransform.childCount > 0)
+        {
+            Debug.Log("Hay un objeto equipado");
+            Destroy(itemPlacerTransform.GetChild(0).gameObject);
+        }
+        else if (itemPlacerTransform.childCount == 0)
+        {
+            Debug.Log("NO Hay un objeto equipado");
+        }
+        GameManager.instance.Player._anim.SetBool("Item", false);
+        GameManager.instance.Player._anim.SetBool("Farol", true);
         Instantiate(itemToEquip, itemPlacerTransform.transform.position, itemPlacerTransform.transform.rotation, itemPlacerTransform);
         HandCollider.enabled = false;
     }

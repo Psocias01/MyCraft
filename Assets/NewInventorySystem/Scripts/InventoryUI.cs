@@ -11,6 +11,7 @@ public class InventoryUI : MonoBehaviour
     private bool optionsPanelOpen = false;
 
     public bool InventoryOpen => inventoryOpen;
+    public bool OptionsPanelOpen => optionsPanelOpen;
     public GameObject inventoryParent;
     public GameObject inventoryTab;
     public GameObject craftingTab;

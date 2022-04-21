@@ -16,3 +16,8 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 2f1b6c6499dc1e54b9d7848b60529fe9, type: 3}
   itemDescription: Espada imbuida con el poder del Rayo
   itemToEquip: {fileID: 3951020569006274495, guid: d050ecf973d179e4ea5b584c386ffa2c, type: 3}
+  Hacha: 0
+  Espada: 1
+  Pico: 0
+  Baston: 0
+  Farolillo: 0

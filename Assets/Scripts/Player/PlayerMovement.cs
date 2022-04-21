@@ -17,7 +17,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator _anim;
 
-    public bool puedeTalar;
+    public bool Hacha;
+    public bool Espada;
+    public bool Pico;
+    public bool Baston;
+    public bool Farolillo;
+    public bool Mano;
 
     public int municionMagiaElectrica;
     
@@ -55,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private HealthBar mHealthBar;
     [SerializeField] private HungerBar mHungerBar;
+    [SerializeField] private InventoryUI inventoryUI;
     
     #endregion
     
@@ -68,9 +74,9 @@ public class PlayerMovement : MonoBehaviour
         mHealthBar = InventoryUI.transform.Find("HealthBar").GetComponent<HealthBar>();
         mHealthBar.Min = 0;
         mHealthBar.Max = Health;
-        TakeDamage(55);
-
+        Mano = true;
     }
+    
 
     #region Health
 
@@ -146,15 +152,41 @@ public class PlayerMovement : MonoBehaviour
         if (!isDead)
         {
             // Ejecutar la accion deseada cuando el item deseado está activo.
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !inventoryUI.InventoryOpen && !inventoryUI.OptionsPanelOpen)
             {
+                if (Pico)
+                {
+                    _anim.SetTrigger("Picar");
+                }
+                else if (Hacha)
+                {
+                    _anim.SetTrigger("Talar");
+                }
+                else if (Espada || Mano)
+                {
+                    _anim.SetTrigger("Attack");
+                }
+                else if (Baston)
+                {
+                    _anim.SetTrigger("Magic");
+                }
+                else if (Farolillo)
+                {
+                    _anim.SetBool("Farol",Farolillo);
+                }
                 // TO DO: Definir que acción invidual hará cada item.
-                _anim.SetTrigger("Talar");
             }
 
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Inventory.instance.UnequipItem();
+                Hacha = false;
+                Espada = false;
+                Pico = false;
+                Baston = false;
+                Farolillo = false;
+                Mano = true;
+                _anim.SetBool("Farol",Farolillo);
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
