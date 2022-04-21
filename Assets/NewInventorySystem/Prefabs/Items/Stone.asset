@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   name: Roca
-  icon: {fileID: 21300000, guid: 0f9ac2a3a44479f42924f9c91e700b07, type: 3}
+  icon: {fileID: 21300000, guid: 68b1f719bfb00754abfda19bbe6b9369, type: 3}
   itemDescription: "Material de construcci\xF3n"

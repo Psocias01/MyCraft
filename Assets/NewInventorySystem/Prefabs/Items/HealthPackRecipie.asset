@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9f203e1cb039447a36f0d2ca36be4e, type: 3}
+  m_Name: HealthPackRecipie
+  m_EditorClassIdentifier: 
+  name: Botiquin Recipie
+  icon: {fileID: 21300000, guid: 2e44e263933672b459f7e36c6134c6c1, type: 3}
+  itemDescription: Used for crafting
+  result: {fileID: 11400000, guid: e23bdc58726a9fe4f8159fdc83265a42, type: 2}
+  ingredients:
+  - item: {fileID: 11400000, guid: 631f118632e67a94ba0058705bb10192, type: 2}
+    amount: 6
+  - item: {fileID: 11400000, guid: 40ace11f83a20ec49864a39b21c26d1c, type: 2}
+    amount: 7
