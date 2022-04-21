@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 9208276897825989628}
   - component: {fileID: 943170330833963034}
   - component: {fileID: 3855905493294053024}
+  - component: {fileID: 5646630334766626457}
+  - component: {fileID: 988936098615105992}
   m_Layer: 0
   m_Name: Projectile_Hielo
   m_TagString: Magia
@@ -43,7 +45,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237351022081729546}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.2
@@ -77,6 +79,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poderPrefab: {fileID: 7361910819694739047, guid: 79aec320cfb979645bd1cbc096cc8242, type: 3}
+--- !u!114 &5646630334766626457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237351022081729546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d85bbf27088ee468b4dfccf5dcc9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DammagePerHit: 40
+--- !u!135 &988936098615105992
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237351022081729546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8580845971932083886
 GameObject:
   m_ObjectHideFlags: 0
