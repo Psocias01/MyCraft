@@ -73,6 +73,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5987598038298479254}
+  - component: {fileID: 1953421063}
+  - component: {fileID: 1953421062}
   m_Layer: 0
   m_Name: Golem_Rigging_OK:L_Wrist_Jnt
   m_TagString: Untagged
@@ -97,6 +99,34 @@ Transform:
   m_Father: {fileID: 7222959157002679573}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1953421063
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253798076168507456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 2.5, z: 2.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1953421062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253798076168507456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b294f13241cdb94591a0d5011ac879d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageRepeatRate: 0.1
+  DamageAmount: 10
+  Repeating: 0
 --- !u!1 &316778853174429670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1569,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2267685599914645730}
+  - component: {fileID: 522263913}
+  - component: {fileID: 522263912}
   m_Layer: 0
   m_Name: Golem_Rigging_OK:R_Wrist_Jnt
   m_TagString: Untagged
@@ -1563,6 +1595,34 @@ Transform:
   m_Father: {fileID: 7518179477897609109}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &522263913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698372344464780183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 2.5, z: 2.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &522263912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698372344464780183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b294f13241cdb94591a0d5011ac879d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageRepeatRate: 0.1
+  DamageAmount: 10
+  Repeating: 0
 --- !u!1 &8875200038857358347
 GameObject:
   m_ObjectHideFlags: 0
