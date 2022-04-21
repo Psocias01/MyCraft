@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator _anim;
 
+    public int bossesMuertos = 0;
+    public GameObject portalWin;
+    
     public bool Hacha;
     public bool Espada;
     public bool Pico;
@@ -75,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
         mHealthBar.Min = 0;
         mHealthBar.Max = Health;
         Mano = true;
+        portalWin.SetActive(false);
     }
     
 
@@ -101,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isDead)
         {
-            // TO DO: _animator.SetTrigger("death") Activar animación de muerte.
+            SceneManager.LoadScene("MainMenu");
         }
     }
     
@@ -146,6 +151,11 @@ public class PlayerMovement : MonoBehaviour
         if (!hasSpent)
         {
             StartCoroutine(ConsumeFood());
+        }
+
+        if (bossesMuertos >= 3)
+        {
+            portalWin.SetActive(true);
         }
         
         

@@ -166,9 +166,9 @@ public class AI_Golem : MonoBehaviour
        Debug.Log("EnemyMuriendo");
        yield return new WaitForSeconds(3);
        Inventory.instance.AddItem(Gem);
+       GameManager.instance.Player.bossesMuertos += 1;
        gameObject.SetActive(false);
        // Activar shader de dissolve
-       
    }
    
    
