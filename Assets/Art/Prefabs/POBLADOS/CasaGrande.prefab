@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2100361102886413131}
   - component: {fileID: 8247816562749461756}
   - component: {fileID: 959267528410895056}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VoraVentana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3006791858292244342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CasaGrande
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 7221155044940042893}
   - component: {fileID: 1238700638468542034}
   - component: {fileID: 7097028503802795508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 6371337284696412325}
   - component: {fileID: 2265667405853306552}
   - component: {fileID: 5202655315012054981}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VoraVentana.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,8 @@ GameObject:
   - component: {fileID: 3865891477059441696}
   - component: {fileID: 229117746086639746}
   - component: {fileID: 2648379684847911332}
-  m_Layer: 0
+  - component: {fileID: 3737082364345979641}
+  m_Layer: 6
   m_Name: Casa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,6 +437,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6908583938423024188, guid: f0150eb941a9f064fa21b806f3a25dc2, type: 3}
+--- !u!114 &3737082364345979641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4748318230781630767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da28d71ab1050a44b9b1e2b0ddcf954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropRatio1: 100
+  dropRatio2: 100
+  hitTimes: 10
+  timeBetweenhits: 1
+  rock: {fileID: 11400000, guid: 6faa93ba38b20484e831da104916f879, type: 2}
+  Wood: {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}
+  casa: {fileID: 2517958521106720204}
 --- !u!1 &7316692233409632697
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +468,7 @@ GameObject:
   - component: {fileID: 4666618349767399286}
   - component: {fileID: 8069028917093621934}
   - component: {fileID: 6048647395639823751}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VoraPuerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +568,7 @@ GameObject:
   - component: {fileID: 9028358692958268049}
   - component: {fileID: 3437127946273467733}
   - component: {fileID: 5791960587705848314}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ventana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +666,7 @@ GameObject:
   - component: {fileID: 6069113328803059159}
   - component: {fileID: 4716954117869440400}
   - component: {fileID: 3631522249841688695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -744,7 +764,7 @@ GameObject:
   - component: {fileID: 2944191154266639299}
   - component: {fileID: 5848971261886191012}
   - component: {fileID: 4300167015506805348}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ventana.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

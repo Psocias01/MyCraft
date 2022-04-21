@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1234586617285038420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CasitaMedia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 6986188305615978119}
   - component: {fileID: 2875865293712998554}
   - component: {fileID: 4770019730077424127}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VoraVentana.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 2719505622220787049}
   - component: {fileID: 5399329728692861662}
   - component: {fileID: 8877575668224296501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VoraVentana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 1171985930015958497}
   - component: {fileID: 7616674251902532486}
   - component: {fileID: 2206186759270162340}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ventana.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 5031445312294880435}
   - component: {fileID: 1669504051982680951}
   - component: {fileID: 8042647810103677220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ventana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 7827738656719207413}
   - component: {fileID: 8785846090673873842}
   - component: {fileID: 6450137561801247745}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 8672609160988653908}
   - component: {fileID: 6296762025700363916}
   - component: {fileID: 2891348692231967424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VoraPuerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,8 @@ GameObject:
   - component: {fileID: 954203950266251778}
   - component: {fileID: 4302514203279300256}
   - component: {fileID: 2842485219662895653}
-  m_Layer: 0
+  - component: {fileID: 620042518}
+  m_Layer: 6
   m_Name: Casa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,6 +733,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6908583938423024188, guid: 009bd9314e5b1cc44b48b7d8a913d89c, type: 3}
+--- !u!114 &620042518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754169721860028173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da28d71ab1050a44b9b1e2b0ddcf954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropRatio1: 100
+  dropRatio2: 100
+  hitTimes: 25
+  timeBetweenhits: 1
+  rock: {fileID: 11400000, guid: 860401e4a70a28a4e9d2170999666810, type: 2}
+  Wood: {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}
+  casa: {fileID: 1903317644061805550}
 --- !u!1 &8808531993962378955
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +764,7 @@ GameObject:
   - component: {fileID: 3716873125725744024}
   - component: {fileID: 6704885409397742729}
   - component: {fileID: 1772451489633250617}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tejado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
