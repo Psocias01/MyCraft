@@ -147,8 +147,4 @@ MonoBehaviour:
   dropRatio2: 50
   hitTimes: 10
   timeBetweenhits: 1
-  itemToDrop1: {fileID: 8521785876279942299, guid: 63e9179fcc0b81846a3ce6b11330d6cf, type: 3}
-  itemToDrop2: {fileID: 8521785876279942299, guid: 63e9179fcc0b81846a3ce6b11330d6cf, type: 3}
-  itemPlacer: {fileID: 0}
-  itemPlacer2: {fileID: 0}
   rock: {fileID: 11400000, guid: 860401e4a70a28a4e9d2170999666810, type: 2}

@@ -139,7 +139,7 @@ public class AI_BossGoblin : MonoBehaviour
                currentAttack = 0;
            }
            
-           _animator.SetTrigger("" + currentAttack);
+           _animator.SetTrigger("Attack");
            
            Invoke(nameof(ResetAttack), timeBetweenAttacks);
        }
@@ -164,6 +164,7 @@ public class AI_BossGoblin : MonoBehaviour
        Debug.Log("EnemyMuriendo");
        yield return new WaitForSeconds(3);
        Inventory.instance.AddItem(Gem);
+       GameManager.instance.Player.bossesMuertos += 1;
        gameObject.SetActive(false);
        // Activar shader de dissolve
        
