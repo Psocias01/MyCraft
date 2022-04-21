@@ -325,6 +325,9 @@ MonoBehaviour:
   Hand: {fileID: 5046780754262876428}
   _anim: {fileID: 5866666021924122560}
   puedeTalar: 0
+  municionMagiaElectrica: 0
+  municionMagiaFuego: 0
+  municionMagiaHielo: 0
   InventoryUI: {fileID: 0}
   speed: 10
   normalSpeed: 10
@@ -374,6 +377,8 @@ MonoBehaviour:
   Camera: {fileID: 121707546634649772}
   projectile: {fileID: 0}
   LHFirePoint: {fileID: 0}
+  materialOn: {fileID: 0}
+  materialOff: {fileID: 0}
   leftHand: 0
   projectileSpeed: 30
   fireRate: 4
@@ -423,6 +428,7 @@ MonoBehaviour:
   hotbarItemList: []
   hotbarController: {fileID: 0}
   itemPlacerTransform: {fileID: 4595432210043444147}
+  HandCollider: {fileID: 3437266950107293516}
 --- !u!1 &1498819856887497288
 GameObject:
   m_ObjectHideFlags: 0
