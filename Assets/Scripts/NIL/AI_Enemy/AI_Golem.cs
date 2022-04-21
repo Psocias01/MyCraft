@@ -93,6 +93,7 @@ public class AI_Golem : MonoBehaviour
        if (enemy_Health <= 0)
        {
            isAlive = false;
+           _navMeshAgent.velocity = Vector3.zero;
        }
    }
    

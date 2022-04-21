@@ -79,6 +79,7 @@ public class AI_Enemy : MonoBehaviour
        if (enemy_Health <= 0)
        {
            isAlive = false;
+           _navMeshAgent.velocity = Vector3.zero;
        }
    }
 
