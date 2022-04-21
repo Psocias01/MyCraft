@@ -17,8 +17,9 @@ public class AI_Golem : MonoBehaviour
    
    private bool isAlive = true;
    private bool TotallyDead = false;
-
-
+   
+   public Item Gem;
+   
    private Vector3 AttackPos;
    
    private NavMeshAgent _navMeshAgent;
@@ -163,6 +164,7 @@ public class AI_Golem : MonoBehaviour
        _animator.SetTrigger("isDead");
        Debug.Log("EnemyMuriendo");
        yield return new WaitForSeconds(3);
+       Inventory.instance.AddItem(Gem);
        gameObject.SetActive(false);
        // Activar shader de dissolve
        

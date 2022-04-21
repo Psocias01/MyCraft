@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7594705091586922242}
   - component: {fileID: 6912544642807266208}
   - component: {fileID: 2971480426430863597}
-  m_Layer: 0
+  - component: {fileID: 3191025001947161269}
+  m_Layer: 6
   m_Name: Casa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,6 +100,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6908583938423024188, guid: ccd2b260249b929479753816c8d42c99, type: 3}
+--- !u!114 &3191025001947161269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100609954438519309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da28d71ab1050a44b9b1e2b0ddcf954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropRatio1: 100
+  dropRatio2: 100
+  hitTimes: 20
+  timeBetweenhits: 1
+  rock: {fileID: 11400000, guid: 860401e4a70a28a4e9d2170999666810, type: 2}
+  Wood: {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}
+  casa: {fileID: 9093368209080248046}
 --- !u!1 &2190405596741442507
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +131,7 @@ GameObject:
   - component: {fileID: 6327327742967891608}
   - component: {fileID: 4131870844661887369}
   - component: {fileID: 3129855533374417398}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tejado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +229,7 @@ GameObject:
   - component: {fileID: 646941307151849205}
   - component: {fileID: 2140981262580027058}
   - component: {fileID: 3757183344351229761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,14 +243,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2994790367659206044}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.9742411, y: 0.86442626, z: 0.49971607}
+  m_LocalRotation: {x: -0.52491194, y: -0.47378013, z: -0.47377998, w: 0.5249118}
+  m_LocalPosition: {x: -1.351, y: 0.8644269, z: 0.09}
   m_LocalScale: {x: 40.76127, y: 73.82887, z: 145.18213}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8465063715723459668}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -84.138}
 --- !u!33 &646941307151849205
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -307,7 +327,7 @@ GameObject:
   - component: {fileID: 2416352447630109107}
   - component: {fileID: 8318313929172823671}
   - component: {fileID: 8408749913209568022}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ventana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +425,7 @@ GameObject:
   - component: {fileID: 2017787937042830420}
   - component: {fileID: 3691057057098457996}
   - component: {fileID: 5590116014361500088}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VoraPuerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +525,7 @@ GameObject:
   - component: {fileID: 4748567044073627753}
   - component: {fileID: 3365761967258523614}
   - component: {fileID: 4790956923649625570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VoraVentana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8465063715723459668}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CasitaPeque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
