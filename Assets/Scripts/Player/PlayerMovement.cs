@@ -18,6 +18,12 @@ public class PlayerMovement : MonoBehaviour
     public Animator _anim;
 
     public bool puedeTalar;
+
+    public int municionMagiaElectrica;
+    
+    public int municionMagiaFuego;
+    
+    public int municionMagiaHielo;
     
     // INVENTORY REFERENCIAS
     [SerializeField] private InventoryUI InventoryUI;

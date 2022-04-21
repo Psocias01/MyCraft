@@ -9,6 +9,9 @@ public class FPSShooter : MonoBehaviour
     private GameObject cameraObject;
     public GameObject projectile;
     public Transform LHFirePoint;
+
+    public GameObject materialOn;
+    public GameObject materialOff;
     
     
     
@@ -25,6 +28,7 @@ public class FPSShooter : MonoBehaviour
     {
         cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
         Camera = cameraObject.GetComponent<Camera>();
+        CheckBullets();
     }
     
     void Update()
@@ -35,6 +39,53 @@ public class FPSShooter : MonoBehaviour
             {
                 timeToFire = Time.time + 1 / fireRate;
                 StartCoroutine(DispararMagia());
+            }
+        }
+    }
+
+    public void CheckBullets()
+    {
+        
+        if (this.tag == "BastonElectrico")
+        {
+            if (GameManager.instance.Player.municionMagiaElectrica <=0)
+            {
+                GameManager.instance.Player.municionMagiaElectrica = 0;
+                materialOff.SetActive(true);
+                materialOn.SetActive(false);
+            }
+            else
+            {
+                materialOff.SetActive(false);
+                materialOn.SetActive(true);
+            }
+        }
+        if (this.tag == "BastonFuego")
+        {
+            if (GameManager.instance.Player.municionMagiaFuego <=0)
+            {
+                GameManager.instance.Player.municionMagiaFuego = 0;
+                materialOff.SetActive(true);
+                materialOn.SetActive(false);
+            }
+            else
+            {
+                materialOff.SetActive(false);
+                materialOn.SetActive(true);
+            }
+        }
+        if (this.tag == "BastonHielo")
+        {
+            if (GameManager.instance.Player.municionMagiaHielo <=0)
+            {
+                GameManager.instance.Player.municionMagiaHielo = 0;
+                materialOff.SetActive(true);
+                materialOn.SetActive(false);
+            }
+            else
+            {
+                materialOff.SetActive(false);
+                materialOn.SetActive(true);
             }
         }
     }
@@ -58,8 +109,46 @@ public class FPSShooter : MonoBehaviour
         if (leftHand)
         {
             leftHand = false;
-            InstantiateProjectile(LHFirePoint);
+            if (this.tag == "BastonElectrico")
+            {
+                if (GameManager.instance.Player.municionMagiaElectrica <=0)
+                {
+                    GameManager.instance.Player.municionMagiaElectrica = 0;
+                }
+                else
+                {
+                    GameManager.instance.Player.municionMagiaElectrica -= 1;
+                    InstantiateProjectile(LHFirePoint);
+                }
+            }
+            if (this.tag == "BastonFuego")
+            {
+                if (GameManager.instance.Player.municionMagiaFuego <=0)
+                {
+                    GameManager.instance.Player.municionMagiaFuego = 0;
+                }
+                else
+                {
+                    GameManager.instance.Player.municionMagiaFuego -= 1;
+                    InstantiateProjectile(LHFirePoint);
+                }
+            }
+            if (this.tag == "BastonHielo")
+            {
+                if (GameManager.instance.Player.municionMagiaHielo <=0)
+                {
+                    GameManager.instance.Player.municionMagiaHielo = 0;
+                }
+                else
+                {
+                    GameManager.instance.Player.municionMagiaHielo -= 1;
+                    InstantiateProjectile(LHFirePoint);
+                }
+            }
+
         }
+
+        CheckBullets();
     }
 
     void ShootProjectile()
@@ -72,6 +161,7 @@ public class FPSShooter : MonoBehaviour
         var projectileObj = Instantiate(projectile, firePoint.position, Quaternion.identity) as GameObject;
         
         projectileObj.GetComponent<Rigidbody>().velocity = (destination - firePoint.position).normalized * projectileSpeed;
+        projectileObj.GetComponent<Transform>().rotation = GameManager.instance.Player.transform.rotation;
         leftHand = true;
     }
 
