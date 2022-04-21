@@ -175,4 +175,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d85bbf27088ee468b4dfccf5dcc9e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DammagePerHit: 20
+  DammagePerHit: 10

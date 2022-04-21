@@ -20098,6 +20098,43 @@ AnimationClip:
     path: Goblin_Enemigo_Rigging_OK:Rig_GRP/Goblin_Enemigo_Rigging_OK:Base_Skeleton/Goblin_Enemigo_Rigging_OK:Spine_Root_jnt/Goblin_Enemigo_Rigging_OK:Spine_1_jnt/Goblin_Enemigo_Rigging_OK:Spine_2_jnt/Goblin_Enemigo_Rigging_OK:Chest_jnt/Goblin_Enemigo_Rigging_OK:Shoulder_R_jnt/Goblin_Enemigo_Rigging_OK:Elbow_R_jnt/Goblin_Enemigo_Rigging_OK:Wrist_R_jnt/DAGA/AGARRE.001
     classID: 65
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.8333333
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1.5
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Enabled
+    path: Goblin_Enemigo_Rigging_OK:Rig_GRP/Goblin_Enemigo_Rigging_OK:Base_Skeleton/Goblin_Enemigo_Rigging_OK:Spine_Root_jnt/Goblin_Enemigo_Rigging_OK:Spine_1_jnt/Goblin_Enemigo_Rigging_OK:Spine_2_jnt/Goblin_Enemigo_Rigging_OK:Chest_jnt/Goblin_Enemigo_Rigging_OK:Shoulder_R_jnt/Goblin_Enemigo_Rigging_OK:Elbow_R_jnt/Goblin_Enemigo_Rigging_OK:Wrist_R_jnt/DAGABoss/AGARRE.001
+    classID: 65
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 24
   m_WrapMode: 0
@@ -20122,6 +20159,13 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 637096962
+      attribute: 3305885265
+      script: {fileID: 0}
+      typeID: 65
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2295606165
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 65
@@ -41166,6 +41210,43 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_Enabled
     path: Goblin_Enemigo_Rigging_OK:Rig_GRP/Goblin_Enemigo_Rigging_OK:Base_Skeleton/Goblin_Enemigo_Rigging_OK:Spine_Root_jnt/Goblin_Enemigo_Rigging_OK:Spine_1_jnt/Goblin_Enemigo_Rigging_OK:Spine_2_jnt/Goblin_Enemigo_Rigging_OK:Chest_jnt/Goblin_Enemigo_Rigging_OK:Shoulder_R_jnt/Goblin_Enemigo_Rigging_OK:Elbow_R_jnt/Goblin_Enemigo_Rigging_OK:Wrist_R_jnt/DAGA/AGARRE.001
+    classID: 65
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.8333333
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1.5
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Enabled
+    path: Goblin_Enemigo_Rigging_OK:Rig_GRP/Goblin_Enemigo_Rigging_OK:Base_Skeleton/Goblin_Enemigo_Rigging_OK:Spine_Root_jnt/Goblin_Enemigo_Rigging_OK:Spine_1_jnt/Goblin_Enemigo_Rigging_OK:Spine_2_jnt/Goblin_Enemigo_Rigging_OK:Chest_jnt/Goblin_Enemigo_Rigging_OK:Shoulder_R_jnt/Goblin_Enemigo_Rigging_OK:Elbow_R_jnt/Goblin_Enemigo_Rigging_OK:Wrist_R_jnt/DAGABoss/AGARRE.001
     classID: 65
     script: {fileID: 0}
   m_EulerEditorCurves: []

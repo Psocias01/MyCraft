@@ -45,14 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensibilitySlder: {fileID: 0}
-  itemList:
-  - {fileID: 11400000, guid: 860401e4a70a28a4e9d2170999666810, type: 2}
-  - {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}
-  - {fileID: 11400000, guid: 4c0623984c6b4f84291499191dffbe02, type: 2}
-  - {fileID: 11400000, guid: e23bdc58726a9fe4f8159fdc83265a42, type: 2}
-  - {fileID: 11400000, guid: 08997e80a9474fc4e8237adc3cc4fa4c, type: 2}
-  - {fileID: 11400000, guid: 47b2f760f69cbe643b784fa25cb323dc, type: 2}
-  - {fileID: 11400000, guid: d44092416d281524f938f55ace6c7a29, type: 2}
+  itemList: []
   craftingRecipes:
   - {fileID: 11400000, guid: 77bd4404d77e6af48a76f8af29cd0324, type: 2}
   - {fileID: 11400000, guid: 9c39719b5cb7829469d49a9c87f61eec, type: 2}
