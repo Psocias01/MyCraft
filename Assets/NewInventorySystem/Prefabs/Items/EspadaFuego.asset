@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Espada de Fuego
   icon: {fileID: 21300000, guid: 3e1bf9619e926c04498e6f6dae58e4e7, type: 3}
   itemDescription: Espada imbuida con el poder del Fuego
-  itemToEquip: {fileID: 0}
+  itemToEquip: {fileID: 3951020569006274495, guid: 9d398ea00804add428dc6abd6a363e31, type: 3}

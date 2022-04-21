@@ -61,8 +61,11 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0, y: 11, z: 0}
+      - m_Value: {x: 0, y: 22, z: 0}
         m_Name: TopRingPosition
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 11, z: 0}
+        m_Name: MidRingPosition
         m_Overridden: 1
     m_Vector4f:
       m_Array:
@@ -136,7 +139,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 5
-  m_Height: 22
+  m_Radius: 10
+  m_Height: 40
   m_Direction: 1
-  m_Center: {x: 0, y: 6, z: 0}
+  m_Center: {x: 0, y: 10, z: 0}

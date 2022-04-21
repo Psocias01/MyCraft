@@ -59,6 +59,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4c0e669ac60b0b4695874711b2d2dba, type: 2}
   - {fileID: 11400000, guid: f251f9d03a82ded44b1177492f306c87, type: 2}
   - {fileID: 11400000, guid: f5cce957e8da0ee46b64dc1924130ed7, type: 2}
+  - {fileID: 11400000, guid: 7245d7d8f7f34bb4898039a0ba8c976b, type: 2}
+  - {fileID: 11400000, guid: 67ddb7c8b54624244b983d384fd59ff3, type: 2}
+  - {fileID: 11400000, guid: 98c07d6554d8eb843a79b124abe6083f, type: 2}
+  - {fileID: 11400000, guid: e9ab55acab611f44f8af44a058408c9f, type: 2}
   Player: {fileID: 0}
   canvas: {fileID: 0}
   itemInfoPrefab: {fileID: 3457193191123757877, guid: 38cbdde6e71325140b5cf3a79e895296, type: 3}

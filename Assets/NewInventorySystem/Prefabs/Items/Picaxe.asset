@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33056347996ff74382ce0a4784e454d, type: 3}
+  m_Name: Picaxe
+  m_EditorClassIdentifier: 
+  name: Pico
+  icon: {fileID: 21300000, guid: d4fa0c5e535d0c8429886e08c018812e, type: 3}
+  itemDescription: Herramienta para recolectar piedra
+  itemToEquip: {fileID: 5579425988410216863, guid: cd3fa62041325d749848683d34a59477, type: 3}
