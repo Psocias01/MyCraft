@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Inventory : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class Inventory : MonoBehaviour
     public HotbarController hotbarController;
     
     public Transform itemPlacerTransform;
+    
+    public BoxCollider HandCollider;
 
     public void UnequipItem()
     {
@@ -37,6 +40,7 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("Desequipando Objeto");
             Destroy(itemPlacerTransform.GetChild(0).gameObject);
+            HandCollider.enabled = true;
         }
         else
         {
@@ -58,6 +62,7 @@ public class Inventory : MonoBehaviour
         }
         GameManager.instance.Player._anim.SetBool("Item", true);
         Instantiate(itemToEquip, itemPlacerTransform.transform.position, itemPlacerTransform.transform.rotation, itemPlacerTransform);
+        HandCollider.enabled = false;
     }
     
     public void SwitchHotbarInventory(Item item)

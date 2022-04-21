@@ -13,28 +13,43 @@ public class Tree : MonoBehaviour
 
     public int ChopTimes = 5;
 
+    public int timeBetweenChops = 1;
+
     public GameObject itemToDrop1;
     public GameObject itemToDrop2;
     
     public Transform itemPlacer;
     public Transform itemPlacer2;
 
-    private bool hasChoped = false;
+    private bool alreadyChoped = false;
 
     private void OnTriggerEnter(Collider other)
     {
         Axe axe = other.gameObject.GetComponent<Axe>();
 
-        if (axe != null && !hasChoped)
+        if (axe != null && !alreadyChoped)
         {
-            hasChoped = true;
+            alreadyChoped = true;
+            ChopTimes -= 3;
+            Debug.Log("Chop");
+            Invoke(nameof(ResetChop), timeBetweenChops);
+        }
+        
+        Mano mano = other.gameObject.GetComponent<Mano>();
+        
+        if (mano != null && !alreadyChoped)
+        {
+            alreadyChoped = true;
             ChopTimes -= 1;
             Debug.Log("Chop");
+            Invoke(nameof(ResetChop), timeBetweenChops);
         }
-        hasChoped = false;
     }
 
-    
+    public void ResetChop()
+    {
+        alreadyChoped = false;
+    }
 
     // Update is called once per frame
     void Update()
