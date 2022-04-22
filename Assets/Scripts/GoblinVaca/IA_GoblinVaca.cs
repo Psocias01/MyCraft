@@ -16,9 +16,6 @@ public class IA_GoblinVaca : MonoBehaviour
     private Transform player;
 
     private bool isAlive;
-    private bool TotallyDead = false;
-
-    public Item comida;
     
     //Movimiento
     [SerializeField] private Transform[] waypoints;
@@ -43,15 +40,6 @@ public class IA_GoblinVaca : MonoBehaviour
     void Update()
     {
         Patroling();
-        
-        if (!isAlive && !TotallyDead)
-        {
-            StartCoroutine(Morir());
-        }
-        if (vacaGoblinHealth <= 0)
-        {
-            isAlive = false;
-        }
     }
 
     public void TakeDamage(int damage)
@@ -61,6 +49,7 @@ public class IA_GoblinVaca : MonoBehaviour
         if (vacaGoblinHealth <= 0)
         {
             movementSpeed = 0;
+            _animator.SetBool("IsDead", true);
         }
     }
 
@@ -77,16 +66,5 @@ public class IA_GoblinVaca : MonoBehaviour
             currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
             _navMeshAgent.SetDestination(waypoints[currentWaypointIndex].position);
         }
-    }
-
-    private IEnumerator Morir()
-    {
-        TotallyDead = true;
-        _animator.SetTrigger("isDead");
-        Debug.Log("VacaMuriendo");
-        yield return new WaitForSeconds(3);
-        Inventory.instance.AddItem(comida);
-        gameObject.SetActive(false);
-        // Activar shader de dissolve
     }
 }
