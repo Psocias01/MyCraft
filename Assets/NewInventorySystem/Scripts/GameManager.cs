@@ -58,6 +58,12 @@ public class GameManager : MonoBehaviour
         {
             Player.Rehab(amount);
         }
+        else if (itemType == StatItemType.Mana)
+        {
+            GameManager.instance.Player.municionMagiaElectrica = 10;
+            GameManager.instance.Player.municionMagiaFuego = 3;
+            GameManager.instance.Player.municionMagiaHielo = 3;
+        }
     }
 
     public void DisplayItemInfo(string itemName, String itemDescription, Vector2 buttonPos)

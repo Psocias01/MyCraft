@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Espada
   icon: {fileID: 21300000, guid: 8c2b448bd21b46049ab19f03495c92fd, type: 3}
-  itemDescription: Used for crafting
+  itemDescription: Espada para una defensa personal
   result: {fileID: 11400000, guid: 8098c90bea92ae54f9f0b2c47f3ed202, type: 2}
   ingredients:
   - item: {fileID: 11400000, guid: 66790a4b5462ead44b0737992c2f1d7c, type: 2}

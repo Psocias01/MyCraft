@@ -21,4 +21,5 @@ public enum StatItemType
 {
     HealthItem,
     FoodItem,
+    Mana
 }

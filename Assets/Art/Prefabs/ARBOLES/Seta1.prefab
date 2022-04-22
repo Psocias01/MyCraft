@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5840921907461918975}
   - component: {fileID: 6929533109745726571}
   - component: {fileID: 3113564645258833494}
-  m_Layer: 0
+  - component: {fileID: 7377863651696900729}
+  m_Layer: 6
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,6 +99,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: cefe4f45241d3b74faf83f8bd6b1949f, type: 3}
+--- !u!114 &7377863651696900729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535400199266024078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18374c2615473a47a2325c8439d2ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 40ace11f83a20ec49864a39b21c26d1c, type: 2}
 --- !u!1 &8855154686367351383
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8189801324682909933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Seta1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

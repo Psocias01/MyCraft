@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Daga
   m_EditorClassIdentifier: 
   name: "Daga b\xE1sica"
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 34b6a11a89088c545b811b6db929ca83, type: 3}
   itemDescription: Daga de los Goblins
-  itemToEquip: {fileID: 0}
+  itemToEquip: {fileID: 7226400959450133946, guid: 74e946d44e7dfd2459c5d62bf364f44a, type: 3}
   Hacha: 0
-  Espada: 0
+  Espada: 1
   Pico: 0
   Baston: 0
   Farolillo: 0

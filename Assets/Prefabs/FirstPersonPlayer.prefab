@@ -384,9 +384,16 @@ MonoBehaviour:
   Controller: {fileID: 121707546739587714}
   Hand: {fileID: 5046780754262876428}
   _anim: {fileID: 5866666021924122560}
-  puedeTalar: 0
+  bossesMuertos: 0
+  portalWin: {fileID: 0}
+  Hacha: 0
+  Espada: 0
+  Pico: 0
+  Baston: 0
+  Farolillo: 0
+  Mano: 0
   municionMagiaElectrica: 6
-  municionMagiaFuego: 5
+  municionMagiaFuego: 3
   municionMagiaHielo: 3
   InventoryUI: {fileID: 0}
   speed: 10
@@ -405,6 +412,7 @@ MonoBehaviour:
   MagiaDeHielo: 2
   mHealthBar: {fileID: 0}
   mHungerBar: {fileID: 0}
+  inventoryUI: {fileID: 0}
   Health: 100
   foodAmount: 100
   hasSpent: 0
@@ -463,7 +471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7862d863385aff42ab0cbc6888657f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryItemList: []
+  inventoryItemList:
+  - {fileID: 11400000, guid: 3faa5fedda428c7478bbf968801f90fb, type: 2}
   hotbarItemList: []
   hotbarController: {fileID: 0}
   itemPlacerTransform: {fileID: 4595432210043444147}

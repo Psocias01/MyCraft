@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a33056347996ff74382ce0a4784e454d, type: 3}
   m_Name: EspadaElectrica
   m_EditorClassIdentifier: 
-  name: Espada Electrica
+  name: Daga Electrica
   icon: {fileID: 21300000, guid: 2f1b6c6499dc1e54b9d7848b60529fe9, type: 3}
-  itemDescription: Espada imbuida con el poder del Rayo
+  itemDescription: Daga imbuida con el poder del Rayo
   itemToEquip: {fileID: 3951020569006274495, guid: d050ecf973d179e4ea5b584c386ffa2c, type: 3}
   Hacha: 0
   Espada: 1
