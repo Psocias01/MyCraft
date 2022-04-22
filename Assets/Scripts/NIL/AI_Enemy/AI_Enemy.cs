@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class AI_Enemy : MonoBehaviour
 {
@@ -13,6 +15,16 @@ public class AI_Enemy : MonoBehaviour
    [SerializeField] private LayerMask player_mask;
    public int enemy_Health;
    public int enemy_MaxHealth = 100;
+   
+   public int dropRatio1 = 50;
+   public int dropRatio2 = 50;
+   public int dropRatio3 = 10;
+   public int dropRatio4 = 5;
+
+   public Item itemToDrop1;
+   public Item itemToDrop2;
+   public Item itemToDrop3;
+   public Item itemToDrop4;
 
    private bool isAlive = true;
    private bool TotallyDead = false;
@@ -159,9 +171,31 @@ public class AI_Enemy : MonoBehaviour
        _animator.SetTrigger("isDead");
        Debug.Log("EnemyMuriendo");
        yield return new WaitForSeconds(3);
-       gameObject.SetActive(false);
-       // Activar shader de dissolve
        
+       float dropRate1 = Random.Range(0, 100);
+       if (dropRatio1 >= dropRate1)
+       {
+           Inventory.instance.AddItem(itemToDrop1);
+       }
+            
+       float dropRate2 = Random.Range(0, 100);
+       if (dropRatio2 >= dropRate2)
+       {
+           Inventory.instance.AddItem(itemToDrop2);
+       }
+       
+       float dropRate3 = Random.Range(0, 100);
+       if (dropRatio3 >= dropRate3)
+       {
+           Inventory.instance.AddItem(itemToDrop3);
+       }
+       
+       float dropRate4 = Random.Range(0, 100);
+       if (dropRatio4 >= dropRate4)
+       {
+           Inventory.instance.AddItem(itemToDrop4);
+       }
+       gameObject.SetActive(false);
    }
    
    
