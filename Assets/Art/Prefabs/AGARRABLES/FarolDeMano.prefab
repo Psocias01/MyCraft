@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 851701046962557401}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FarolDeMano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1230602695507635267}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FarolDeMano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1230602696754156102}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ItemPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,15 +89,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230602696754156089}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.70143205, y: -0.17792228, z: 0.6796869, w: 0.1198434}
+  m_LocalPosition: {x: 0.0088, y: 0.0285, z: 0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 851701046962557401}
   m_Father: {fileID: 1230602695507635267}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 155.796, y: -87.026, z: 5.4539948}
 --- !u!1 &3374764259312537892
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 8350192650172025545}
   - component: {fileID: 6944108364805810889}
   - component: {fileID: 6350531150433459585}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 5053898019872640631}
   - component: {fileID: 8045957060071047405}
   - component: {fileID: 6736345756678462001}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 5664613198441661103}
   - component: {fileID: 285881505660165515}
   - component: {fileID: 5166326779797964394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}

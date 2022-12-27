@@ -39,6 +39,7 @@ public class FPSShooter : MonoBehaviour
             {
                 timeToFire = Time.time + 1 / fireRate;
                 StartCoroutine(DispararMagia());
+                AudioManager.audioManager.Play("Magia1");
             }
         }
     }

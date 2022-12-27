@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class IA_GoblinVaca : MonoBehaviour
 {
@@ -14,8 +15,15 @@ public class IA_GoblinVaca : MonoBehaviour
     private NavMeshAgent _navMeshAgent;
     private Animator _animator;
     private Transform player;
+    
+    public int dropRatio1 = 100;
+    public int dropRatio2 = 50;
+    
+    public Item itemToDrop1;
+    public Item itemToDrop2;
 
-    private bool isAlive;
+    private bool isAlive = true;
+    private bool TotallyDead = false;
     
     //Movimiento
     [SerializeField] private Transform[] waypoints;
@@ -40,6 +48,16 @@ public class IA_GoblinVaca : MonoBehaviour
     void Update()
     {
         Patroling();
+        
+        if (!isAlive && !TotallyDead)
+        {
+            StartCoroutine(Morir());
+        }
+        if (vacaGoblinHealth <= 0)
+        {
+            isAlive = false;
+            _navMeshAgent.velocity = Vector3.zero;
+        }
     }
 
     public void TakeDamage(int damage)
@@ -48,8 +66,9 @@ public class IA_GoblinVaca : MonoBehaviour
 
         if (vacaGoblinHealth <= 0)
         {
+            isAlive = false;
             movementSpeed = 0;
-            _animator.SetBool("IsDead", true);
+            
         }
     }
 
@@ -66,5 +85,22 @@ public class IA_GoblinVaca : MonoBehaviour
             currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
             _navMeshAgent.SetDestination(waypoints[currentWaypointIndex].position);
         }
+    }
+    
+    private IEnumerator Morir()
+    {
+        TotallyDead = true;
+        _animator.SetBool("IsDead", true);
+        Debug.Log("EnemyMuriendo");
+        yield return new WaitForSeconds(3);
+        Inventory.instance.AddItem(itemToDrop1);
+        float dropRate1 = Random.Range(0, 100);
+        if (dropRatio1 >= dropRate1)
+        {
+            Inventory.instance.AddItem(itemToDrop2);
+        }
+        gameObject.SetActive(false);
+        // Activar shader de dissolve
+       
     }
 }

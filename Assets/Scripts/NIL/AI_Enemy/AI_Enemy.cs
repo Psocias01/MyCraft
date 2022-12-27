@@ -100,11 +100,11 @@ public class AI_Enemy : MonoBehaviour
        // Activar animación de recibir daño (opcional).
        
        enemy_Health -= damage;
-       
        if (enemy_Health <= 0)
        {
            isAlive = false;
        }
+       AudioManager.audioManager.Play("HitGoblin");
    }
    
    private void Patroling()

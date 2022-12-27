@@ -87,12 +87,12 @@ public class AI_BossGoblin : MonoBehaviour
        // Activar animación de recibir daño (opcional).
        
        enemy_Health -= damage;
-       
        if (enemy_Health <= 0)
        {
            isAlive = false;
            _navMeshAgent.velocity = Vector3.zero;
        }
+       AudioManager.audioManager.Play("HitGoblin");
    }
    
    private void Patroling()

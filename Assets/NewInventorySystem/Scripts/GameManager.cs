@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     #endregion
     
     public Slider mouseSensibilitySlder;
+    public Slider MusicSlder;
+    public Slider EffectsSlder;
     
     public List<Item> itemList = new List<Item>();
     public List<Item> craftingRecipes = new List<Item>();
@@ -35,9 +37,25 @@ public class GameManager : MonoBehaviour
     public Transform mainCanvas;
     public Transform HotbarTransform;
     public Transform inventoryTransform;
-    
+
+    public int sliderEfectos;
+    public int sliderMusica;
+    public int sensibilitySlder;
+
     public float moveX = 0f;
     public float moveY = 0f;
+
+    private void Start()
+    {
+        if (canvas != null)
+        {
+            MusicSlder.value = sliderMusica;
+            EffectsSlder.value = sliderEfectos;
+            mouseSensibilitySlder.value = sensibilitySlder;
+        }
+        AudioManager.audioManager.Stop("Musica1 Menu");
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.X))
@@ -52,7 +70,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Consuming " + itemType + " Add amount: " + amount);
         if (itemType == StatItemType.FoodItem)
         {
-            
+            Player.GainFood(amount);
         }
         else if (itemType == StatItemType.HealthItem)
         {

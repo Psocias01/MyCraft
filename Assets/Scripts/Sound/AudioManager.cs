@@ -1,12 +1,37 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
     public static AudioManager audioManager;
+
+    public Slider SliderEfectos;
+    public Slider SliderMusica;
+    public Slider SensibilitySlder;
+    
+    public float sliderEfectos;
+    public float sliderMusica;
+    public float sensibilitySlder;
+    
+
+    public void SetsliderEfectosValue()
+    {
+        sliderEfectos = SliderEfectos.value;
+    }
+    
+    public void SetsliderMusicaValue()
+    {
+        sliderMusica = SliderMusica.value;
+    }
+    
+    public void SetsensibilitySlderValue()
+    {
+        sensibilitySlder = SensibilitySlder.value;
+    }
     
     void Awake()
     {
@@ -34,11 +59,6 @@ public class AudioManager : MonoBehaviour
         }
     }
     
-    private void Start()
-    {
-        Play("Music1");
-    }
-
     public void Play(string Audioname)
     {
         Sound s = Array.Find(sounds, sound => sound.name == Audioname);

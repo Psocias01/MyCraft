@@ -33,6 +33,7 @@ public class Tree : MonoBehaviour
             ChopTimes -= 3;
             Debug.Log("Chop");
             Invoke(nameof(ResetChop), timeBetweenChops);
+            AudioManager.audioManager.Play("Tala2");
         }
         
         Mano mano = other.gameObject.GetComponent<Mano>();
@@ -43,6 +44,7 @@ public class Tree : MonoBehaviour
             ChopTimes -= 1;
             Debug.Log("Chop");
             Invoke(nameof(ResetChop), timeBetweenChops);
+            AudioManager.audioManager.Play("Tala");
         }
     }
 

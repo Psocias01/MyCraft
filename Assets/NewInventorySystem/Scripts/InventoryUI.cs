@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -26,12 +27,20 @@ public class InventoryUI : MonoBehaviour
     
     public Transform inventoryItemTransform;
     public Transform craftingItemTransform;
+    
+    public Slider SliderEfectos;
+    public Slider SliderMusica;
+    public Slider SensibilitySlder;
 
     private void Start()
     {
         Inventory.instance.onItemChange += UpdateInventoryUI;
         UpdateInventoryUI();
         SetUpCraftingRecipes();
+
+        SliderEfectos.value = AudioManager.audioManager.sliderEfectos;
+        SliderMusica.value = AudioManager.audioManager.sliderMusica;
+        SensibilitySlder.value = AudioManager.audioManager.sensibilitySlder;
     }
 
     // Update is called once per frame

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class SetVolume : MonoBehaviour
 {
 
     public AudioMixer Mixer;
-
+    
     public void SetLevelMusic(float sliderValue)
     {
         Mixer.SetFloat("MusicVol", Mathf.Log10 (sliderValue) * 20);

@@ -29,6 +29,7 @@ public class Rock : MonoBehaviour
             hitTimes -= 3;
             Debug.Log("RockHit");
             Invoke(nameof(ResetChop), timeBetweenhits);
+            AudioManager.audioManager.Play("Pico");
         }
         
         Mano mano = other.gameObject.GetComponent<Mano>();
@@ -39,6 +40,7 @@ public class Rock : MonoBehaviour
             hitTimes -= 1;
             Debug.Log("RockHit");
             Invoke(nameof(ResetChop), timeBetweenhits);
+            AudioManager.audioManager.Play("Pico2");
         }
     }
 

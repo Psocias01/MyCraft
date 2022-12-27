@@ -392,13 +392,15 @@ MonoBehaviour:
   Baston: 0
   Farolillo: 0
   Mano: 0
-  municionMagiaElectrica: 6
+  municionMagiaElectrica: 5
   municionMagiaFuego: 3
   municionMagiaHielo: 3
   InventoryUI: {fileID: 0}
   speed: 10
   normalSpeed: 10
+  hungrySpeed: 5
   sprintSpeed: 18
+  sprintHungrySpeed: 9
   gravity: -39.24
   jumpHeight: 3
   playerMovement: 0
@@ -416,7 +418,7 @@ MonoBehaviour:
   Health: 100
   foodAmount: 100
   hasSpent: 0
-  timeToSpendFood: 3
+  timeToSpendFood: 1
 --- !u!65 &1081235952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -923,7 +925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 25823646609958969, guid: d320429b2087e094bb665f78458d28f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.065814e-15
+      value: -1.1546319e-15
       objectReference: {fileID: 0}
     - target: {fileID: 25823646609958969, guid: d320429b2087e094bb665f78458d28f9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1079,7 +1081,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 55ed840c45ea7b243879304e4fd8f712, type: 2}
     - target: {fileID: 6908249485260914836, guid: d320429b2087e094bb665f78458d28f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2434497e-15
+      value: -1.1546319e-15
       objectReference: {fileID: 0}
     - target: {fileID: 6908249485260914836, guid: d320429b2087e094bb665f78458d28f9, type: 3}
       propertyPath: m_LocalRotation.x

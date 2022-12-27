@@ -38,8 +38,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private InventoryUI InventoryUI;
 
     public float speed = 10f;
-    public float normalSpeed = 10f;
-    public float sprintSpeed = 18f;
+    [SerializeField] private float normalSpeed = 10f;
+    [SerializeField] private float hungrySpeed = 5f;
+    [SerializeField] private float sprintSpeed = 18f;
+    [SerializeField] private float sprintHungrySpeed = 9f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
     public float playerMovement;
@@ -61,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private float playerIsMoving;
     private bool isRunning;
+    private bool canSprint = true;
 
     [SerializeField] private HealthBar mHealthBar;
     [SerializeField] private HungerBar mHungerBar;
@@ -120,7 +123,6 @@ public class PlayerMovement : MonoBehaviour
         }
         
         mHealthBar.SetHealth(Health);
-
     }
 
     #endregion
@@ -130,21 +132,40 @@ public class PlayerMovement : MonoBehaviour
     public int foodAmount = 100;
     public bool hasSpent;
     public float timeToSpendFood = 15f;
-    
-    
+    private bool alreadyHealed;
+
+
     IEnumerator ConsumeFood()
     {
         hasSpent = true;
         yield return new WaitForSeconds(timeToSpendFood);
         foodAmount -= 10;
+
+        if (foodAmount < 0)
+        {
+            foodAmount = 0;
+        }
         hasSpent = false;
         
         mHungerBar.SetFood(foodAmount);
     }
 
+    public void GainFood(int Amount)
+    {
+        foodAmount += Amount;
+        mHungerBar.SetFood(foodAmount);
+        if (foodAmount > 10)
+        {
+            foodAmount = 10;
+        }
+    }
+
     #endregion
     
-    
+    private void ResetHealFood()
+    {
+        alreadyHealed = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -157,8 +178,38 @@ public class PlayerMovement : MonoBehaviour
         {
             portalWin.SetActive(true);
         }
+
+        if (foodAmount >= 9)
+        {
+            if (!alreadyHealed)
+            {
+                alreadyHealed = true;
+                Rehab(10);
+                float timeBetweenHeals = 5;
+                Invoke(nameof(ResetHealFood), timeBetweenHeals);
+            }
+        }
         
-        
+        if (foodAmount <= 5)
+        {
+            normalSpeed = hungrySpeed;
+            sprintSpeed = sprintHungrySpeed;
+        }
+        else
+        {
+            normalSpeed = 10;
+            sprintSpeed = 18;
+        }
+
+        if (foodAmount < 3)
+        {
+            canSprint = false;
+        }
+        else
+        {
+            canSprint = true;
+        }
+
         if (!isDead)
         {
             // Ejecutar la accion deseada cuando el item deseado está activo.
@@ -199,7 +250,7 @@ public class PlayerMovement : MonoBehaviour
                 _anim.SetBool("Farol",Farolillo);
             }
 
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && canSprint)
             {
                 speed = sprintSpeed;
                 

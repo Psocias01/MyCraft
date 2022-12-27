@@ -89,12 +89,12 @@ public class AI_Golem : MonoBehaviour
        // Activar animación de recibir daño (opcional).
        
        enemy_Health -= damage;
-       
        if (enemy_Health <= 0)
        {
            isAlive = false;
            _navMeshAgent.velocity = Vector3.zero;
        }
+       AudioManager.audioManager.Play("HitGolem");
    }
    
    private void Patroling()
@@ -162,7 +162,7 @@ public class AI_Golem : MonoBehaviour
    private IEnumerator Morir()
    {
        TotallyDead = true;
-       _animator.SetTrigger("isDead");
+       _animator.SetBool("isDead", true);
        Debug.Log("EnemyMuriendo");
        yield return new WaitForSeconds(3);
        Inventory.instance.AddItem(Gem);

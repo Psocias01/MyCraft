@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3066333165162554624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3066333165162554630}
+  - component: {fileID: 3066333165162554631}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3066333165162554630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3066333165162554624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3066333165162554631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3066333165162554624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb27997c87e2fa48a5467611de73b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Enemigo1
+    clip: {fileID: 8300000, guid: 5efd9590150488245b64d71bb4c3498a, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Enemigo2
+    clip: {fileID: 8300000, guid: a21afe6e75f73e84eb273917f6488924, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Boss3
+    clip: {fileID: 8300000, guid: a4d0c0fa8067a814a81ee472d7160129, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: GoblinVaca
+    clip: {fileID: 8300000, guid: 7466a7bd63714b241a1c042c30c3cf1b, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Curacion
+    clip: {fileID: 8300000, guid: 6e49536f24159d44490849dddfbcd0ee, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Fuego
+    clip: {fileID: 8300000, guid: a3730c1fcdeb69548be2d2b5d8e9679c, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Magia1
+    clip: {fileID: 8300000, guid: 00a596a66d386334ca9fc1334814d80e, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Sonido Agua Lago
+    clip: {fileID: 8300000, guid: d1f55568340eea54d8227033b4986efa, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Sonido Olas
+    clip: {fileID: 8300000, guid: c29818d276795c84ba8e5b1430f90066, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Viento Mar
+    clip: {fileID: 8300000, guid: f0a8d8cd1c809b241a60f07f41fa2129, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Viento Nieve
+    clip: {fileID: 8300000, guid: 04ffe35dca062e240b4a5fcce599769a, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Viento Pradera
+    clip: {fileID: 8300000, guid: 2854a692c5c8c5c409dbe10c48016ad0, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Zona Quemada
+    clip: {fileID: 8300000, guid: ab4ab952958c2984c917bbaa7124cc53, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Musica1 Menu
+    clip: {fileID: 8300000, guid: a4f2183dfd8bf604bb8fea110b933ae0, type: 3}
+    AudioMixer: {fileID: 24300002, guid: 51cc3dfaeced3db44b63b76a58c9dde9, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Musica2 Ambiente
+    clip: {fileID: 8300000, guid: 62478662e0558a54ead3c740ac674492, type: 3}
+    AudioMixer: {fileID: 24300002, guid: 51cc3dfaeced3db44b63b76a58c9dde9, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Musica3 Boss
+    clip: {fileID: 8300000, guid: 260dc9025bb8a234aab6f0efb35bf49d, type: 3}
+    AudioMixer: {fileID: 24300002, guid: 51cc3dfaeced3db44b63b76a58c9dde9, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Tala
+    clip: {fileID: 8300000, guid: b218d37bccdf4d644948125cb64a3e07, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tala2
+    clip: {fileID: 8300000, guid: d17f8a4cf88877645a30a0950dd4997f, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pico
+    clip: {fileID: 8300000, guid: e5adf6bf19aeadb4eb8cb866f4d2b664, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pico2
+    clip: {fileID: 8300000, guid: 4a3b76b20a2ab004d90128d7a21aac25, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HitGolem
+    clip: {fileID: 8300000, guid: 37759ff87103a8b47a8dd08500a44253, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HitGoblin
+    clip: {fileID: 8300000, guid: 044b2bfd84e68064392ef00526dd0a52, type: 3}
+    AudioMixer: {fileID: 24300002, guid: c0f2884e8625592429f0da012ee1aa84, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  SliderEfectos: {fileID: 0}
+  SliderMusica: {fileID: 0}
+  SensibilitySlder: {fileID: 0}
+  sliderEfectos: 1
+  sliderMusica: 1
+  sensibilitySlder: 1
